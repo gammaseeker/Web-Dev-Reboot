@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Count de Money </title>
+		<style> </style>
+		<script>
+			function initialize()
+			{
+				counterElement=document.getElementById("Pennies");
+				Five=document.getElementById("Nickels");
+				Ten=document.getElementById("Dimes");
+				TwentyFive=document.getElementById("Quarters");
+				Total=document.getElementById("money");
+				bank1 = 0; // This represents the total amount of pennies 
+				bank2 = 0; //This represents the total amount of Nickels
+				bank3 = 0; //This represents the total amount of Dimes
+				bank4 = 0; //This represents the total amount of Quarters
+				ctr = 0; // This represents the total money
+			}
+			function AddPenny1()
+			{
+				bank1 = bank1 + 1;
+				ctr = ctr + 1/100;
+			}
+			function SubtractPenny1()
+			{
+				bank1 = bank1 - 1;
+				ctr = ctr - 1/100;
+			}
+			function AddPenny5()
+			{
+				bank1 = bank1 + 5;
+				ctr = ctr + 5/100
+			}
+			function SubtractPenny5()
+			{
+				bank1 = bank1 - 5;
+				ctr = ctr - 5/100;
+			}
+			function Draw1()
+			{
+				counterElement.innerHTML = bank1;
+				Total.innerHTML = ctr.toFixed(2);
+			}
+			function AddNickle1()
+			{
+				bank2 = bank2 + 1;
+				ctr = ctr + 5/100;
+			}
+			function SubtractNickle1()
+			{
+				bank2 = bank2 - 1;
+				ctr = ctr - 5/100;
+			}
+			function AddNickle5()
+			{
+				bank2 = bank2 + 5;
+				ctr = ctr + 10/100
+			}
+			function SubtractNickle5()
+			{
+				bank2 = bank2 - 5;
+				ctr = ctr - 10/100;
+			}
+			function Draw2()
+			{
+				Five.innerHTML = bank2;
+				Total.innerHTML = ctr.toFixed(2);
+			}
+			function AddDime1()
+			{
+				bank3 = bank3 + 1;
+				ctr = ctr + 10/100;
+			}
+			function SubtractDime1()
+			{
+				bank3 = bank3 - 1;
+				ctr = ctr - 10/100;
+			}
+			function AddDime5()
+			{
+				bank3 = bank3 + 5;
+				ctr = ctr + 50/100;
+			}
+			function SubtractDime5()
+			{
+				bank3 = bank3 - 5;
+				ctr = ctr - 50/100;
+			}
+			function Draw3()
+			{
+				Ten.innerHTML = bank3;
+				Total.innerHTML = ctr.toFixed(2);
+			}
+			function AddQuarter1()
+			{
+				bank4 = bank4 + 1;
+				ctr = ctr + 25/100;
+			}
+			function SubtractQuarter1()
+			{
+				bank4 = bank4 - 1;
+				ctr = ctr - 25/100;
+			}
+			function AddQuarter5()
+			{
+				bank4 = bank4 + 5;
+				ctr = ctr + 125/100;
+			}
+			function SubtractQuarter5()
+			{
+				bank4 = bank4 - 5;
+				ctr = ctr - 125/100;
+			}
+			function Draw4()
+			{
+				TwentyFive.innerHTML = bank4;
+				Total.innerHTML = ctr.toFixed(2);
+			}
+			
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<div> Total Money </div> <div id = "money"> 0.00 </div> 
+		<hr />
+			
+		<div> Pennies </div> <div id = "Pennies"> 0 </div>
+			<button onClick =  "AddPenny1(); Draw1();"> +1 </button>
+			<button onClick = "SubtractPenny1(); Draw1();"> -1 </button>
+			<button onClick = "AddPenny5(); Draw1();"> +5 </button>
+			<button onClick = "SubtractPenny5(); Draw1();"> -5 </button>
+		
+		<div> Nickels </div> <div id = "Nickels"> 0 </div>
+			<button onClick = "AddNickle1(); Draw2();"> +1 </button>
+			<button onClick = "SubtractNickle1(); Draw2();"> -1 </button>
+			<button onClick = "AddNickle5(); Draw2();"> +5 </button>
+			<button onClick = "SubtractNickle5(); Draw2();"> -5 </button>
+		
+		<div> Dimes </div> <div id = "Dimes"> 0 </div>
+			<button onClick = "AddDime1(); Draw3();"> +1 </button>
+			<button onClick = "SubtractDime1(); Draw3();"> -1 </button>
+			<button onClick = "AddDime5(); Draw3();"> +5 </button>
+			<button onClick = "SubtractDime5(); Draw3();"> -5 </button>
+		
+		<div> Quarters </div> <div id = "Quarters"> 0 </div>
+			<button onClick = "AddQuarter1(); Draw4();"> +1 </button>
+			<button onClick = "SubtractQuarter1(); Draw4();"> -1 </button>
+			<button onClick = "AddQuarter5(); Draw4();"> +5 </button>
+			<button onClick = "SubtractQuarter5(); Draw4();"> -5 </button>
+	</body>
+	
+</html>
