@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title>Count De Money </title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="css/index.css">
+		<script src="js/index.js"></script>
+	</head>
+	<body onload = "initialize();"> 
+        <h1> Count De Money</h1>
+        <div class = "top">Total Money</div>
+        <div class = "top">
+            $
+            <span id = "total">0.00</span>
+        </div>
+    <hr>
+        <div>
+            <div>Pennies:</div>
+            <div>
+                <img src = "images/penny.png">
+            </div>
+            <div class = "control">
+                <span class = "amount">0</span>
+                <button onclick = "add(1, 0);">+1</button>
+                <button onclick = "add(5, 0);">+5</button>
+                <button onclick = "add(-1, 0);">-1</button>
+                <button onclick = "add(-5, 0);">-5</button>
+            </div>
+        </div>
+        <div>
+            <div>Nickels:</div>
+            <div>
+                <img src = "images/nickel.png">
+            </div>
+            <div class = "control">
+                <span class = "amount">0</span>
+                <button onclick = "add(1, 1);">+1</button>
+                <button onclick = "add(5, 1);">+5</button>
+                <button onclick = "add(-1, 1);">-1</button>
+                <button onclick = "add(-5, 1);">-5</button>
+            </div>
+            
+        </div>
+        <div>
+            <div>Dimes:</div>
+            <div>
+                <img src = "images/dime.png">
+            </div>
+            <div class = "control">
+                <span class = "amount">0</span>
+                <button onclick = "add(1, 2);">+1</button>
+                <button onclick = "add(5, 2);">+5</button>
+                <button onclick = "add(-1, 2);">-1</button>
+                <button onclick = "add(-5, 2);">-5</button>
+            </div>
+        </div>
+        <div>
+            <div>Quarters:</div>
+            <div>
+                <img src = "images/quarter.png">
+            </div>
+            <div class = "control">
+                <span class = "amount">0</span>
+                <button onclick = "add(1, 3);">+1</button>
+                <button onclick = "add(5, 3);">+5</button>
+                <button onclick = "add(-1, 3);">-1</button>
+                <button onclick = "add(-5, 3);">-5</button>
+            </div>
+        </div>
+        <div>
+            <div>Dollars:</div>
+            <div>
+                <img src = "images/bill.png">
+            </div>
+            <div class = "control">
+                <span class = "amount">0</span>
+                <button onclick = "add(1, 4);">+1</button>
+                <button onclick = "add(5, 4);">+5</button>
+                <button onclick = "add(-1, 4);">-1</button>
+                <button onclick = "add(-5, 4);">-5</button>
+            </div>
+        </div>
+	</body>
+	
+</html>

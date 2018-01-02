@@ -1,0 +1,39 @@
+body
+{
+    background-color: #d84974;
+    font-family: "Berlin Sans FB";
+}
+
+.top, h1
+{
+    text-align: center;
+}
+
+button
+{
+    font-size: 18pt;
+}
+
+.amount
+{
+    font-size: 22pt;
+}
+
+div
+{
+    font-size: 16pt;
+}
+
+img
+{
+    height: 150px;
+    width: 150px;
+}
+
+.control
+{
+    display: inline;
+    margin-left: 15%;
+    position: relative;
+    top: -80px;
+}
