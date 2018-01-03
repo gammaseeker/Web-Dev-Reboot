@@ -2,13 +2,49 @@
 <!-- Joey Jiemjitpolchai -->
 <html> 
 	<head> 
-		<title> </title>
+		<title>Zoom Zoom </title>
 		<meta charset="UTF-8">
 		<style> </style>
 		<script> </script>
 	</head>
-	<body> 
-		
+	<body onload = "initialize();"> 
+        <h1>Spaceship Builder</h1>
+        </hr>
+        <h2>The Arkship of Adun</h2>
+        <div>
+            <span>Speed:</span> <span id = "speed" class = "ctr">0</span>
+            <span>Shield:</span> <span id = "shield" class = "ctr">0</span>
+            <span>Attack:</span> <span id = "attack" class = "ctr">0</span>
+            <span>Mode:</span> <span id = "mode">None</span>
+            <span>Engine:</span> <span id = "engine">Hyperdrive</span>
+        </div>
+        <div>
+            <button onclick="add(1, 0);">Speed Up 1</button>
+            <button onclick="add(-1, 0);">Speed Down 1</button>
+            <button onclick="add(5, 0);">Speed Up 5</button>
+            <button onclick="add(-5, 0);">Speed Down 5</button>
+        </div>
+        <div>
+            <button onclick="add(1, 1);">Shield Up 1</button>
+            <button onclick="add(-1, 1);">Shield Down 1</button>
+            <button onclick="add(5, 1);">Shield Up 5</button>
+            <button onclick="add(-5, 1);">Shield Down 5</button>
+        </div>
+        <div>
+            <button onclick="add(1, 2);">Attack Up 1</button>
+            <button onclick="add(-1, 2);">Attack Down 1</button>
+            <button onclick="add(5, 2);">Attack Up 5</button>
+            <button onclick="add(-5, 2);">Attack Down 5</button>
+        </div>
+        <div>
+            <button onclick="toggleMode('Siege');">Siege Mode</button>
+            <button onclick ="toggleMode('Purify');">Purify Mode</button>
+        </div>
+        <div>
+            <button onclick = "selectEngine('Hyperdrive');">Hyperdrive</button>
+            <button onclick = "selectEngine('Cloakdrive');">Cloakdrive</button>
+            <button onclick = "selectEngine('Dimensiondrive');">Dimensiondrive</button>
+        </div>
 	</body>
 	
 </html>
