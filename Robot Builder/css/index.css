@@ -40,3 +40,8 @@ h2, #menu
     height: 300px;
     width: 400px;
 }
+
+.buttons
+{
+    text-align: center;
+}
