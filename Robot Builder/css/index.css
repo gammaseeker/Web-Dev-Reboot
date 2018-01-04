@@ -1,5 +1,42 @@
+#background
+{
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+h1, h2, span
+{
+    color: #ebebeb;
+    font-family: "Berlin Sans FB";
+}
+
+span
+{
+    font-size: 16pt;
+}
+
 h1
 {
     text-align: center;
 }
 
+h2, #menu
+{
+    display: inline-block;
+
+}
+
+#stage
+{
+    text-align: center;
+}
+
+#ship
+{
+    height: 300px;
+    width: 400px;
+}

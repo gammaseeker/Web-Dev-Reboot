@@ -4,20 +4,28 @@
 	<head> 
 		<title>Zoom Zoom </title>
 		<meta charset="UTF-8">
-		<style> </style>
-		<script> </script>
+        <style> </style>
+        <link type = "text/css" rel = "stylesheet" href = "css/index.css" />
+		<script src = "js/index.js"> </script>
 	</head>
 	<body onload = "initialize();"> 
+        <img id = "background" src = "images/background.png">
         <h1>Spaceship Builder</h1>
-        </hr>
-        <h2>The Arkship of Adun</h2>
-        <div>
-            <span>Speed:</span> <span id = "speed" class = "ctr">0</span>
-            <span>Shield:</span> <span id = "shield" class = "ctr">0</span>
-            <span>Attack:</span> <span id = "attack" class = "ctr">0</span>
-            <span>Mode:</span> <span id = "mode">None</span>
-            <span>Engine:</span> <span id = "engine">Hyperdrive</span>
+        <hr>
+        <div id = "stage">
+            <h2>The Arkship of Adun</h2>
+            <img id ="ship" src="images/hyper.jpg" align= "center">
+            <div id = "menu">
+                <span>Speed:</span> <span id = "speed" class = "ctr">0</span>
+                <span>Shield:</span> <span id = "shield" class = "ctr">0</span>
+                </br>
+                <span>Attack:</span> <span id = "attack" class = "ctr">0</span>
+                <span>Mode:</span> <span id = "mode">None</span>
+                </br>
+                <span>Engine:</span> <span id = "engine">Hyperdrive</span>
+            </div>            
         </div>
+
         <div>
             <button onclick="add(1, 0);">Speed Up 1</button>
             <button onclick="add(-1, 0);">Speed Down 1</button>
