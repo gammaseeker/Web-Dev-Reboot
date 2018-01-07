@@ -1,0 +1,7 @@
+p{
+      width: 50%; /*50% of the parent element*/
+      border: 2px solid blue;
+      padding: 40px;
+      /* margin: 100px; */
+      margin: auto; /*centers things. Does margin left and right*/
+}
