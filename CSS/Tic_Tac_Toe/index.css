@@ -1,0 +1,32 @@
+div{
+      text-align: center;
+
+}
+table{
+      margin: auto;
+}
+td{
+      width: 100px;
+      height: 100px;
+      /* border: 1px solid black; */
+}
+
+.top > td{
+      border-bottom: 1px solid black;
+}
+
+.mid > td{
+      border-bottom: 1px solid black;
+}
+
+tr > td:nth-of-type(1){
+      border-right: 1px solid black;
+}
+
+tr > td:nth-of-type(2){
+      border-right: 1px solid black;
+}
+
+h1{
+      text-align: center;
+}
