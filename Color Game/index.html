@@ -10,10 +10,17 @@
 		<script src = "index.js"> </script>
 	</head>
 	<body onload="initialize();">
-		<h1>The Great RGB<span id = "goal"></span> Color Game</h1>
+		<h1 id = "banner">The Great
+			<br />
+			<span id ="rgbCap">RGB</span><span id = "goal"></span>
+			<br />
+			Color Game</h1>
 
-		<div>
+		<div id = "stripe">
+			<button id ="resetBtn" onclick = "reset();">New Colors</button>
 			<span id="message"></span>
+			<button onclick="toggleDifficulty(false);" id="easyBtn">Easy</button>
+			<button onclick="toggleDifficulty(true);" class="selected" id="hardBtn">Hard</button>
 		</div>
 		<div id="container">
 			<div class="square" onclick="pickColor(0);"></div>
