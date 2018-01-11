@@ -1,5 +1,4 @@
 function initialize(){
-       //["rgb(255, 0, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)", "rgb(0, 255, 255)", "rgb(0, 0, 255)", "rgb(255, 0, 255)"];//HARDCODED
       squares = document.getElementsByClassName("square");
       goal = document.getElementById("goal");
       msg = document.getElementById("message");
@@ -9,9 +8,23 @@ function initialize(){
       rndColor = colors[getRandomInt(colors.length)];
       msgDisplay = "";
       targetColor = "";
-      targetColor = rndColor.substring(3, rndColor.length);//HARDCODED
+      targetColor = rndColor.substring(3, rndColor.length);
+
       for(var i = 0; i < squares.length; i++){
             squares[i].style.backgroundColor = colors[i];
+      }
+
+      display();
+}
+
+function pickColor(index){//compare color to targetColor
+      if(squares[index].style.backgroundColor.substring(3, squares[index].style.backgroundColor.length) == targetColor){
+            msgDisplay = "Correct!";
+            changeColors(squares[index].style.backgroundColor);
+      }
+      else {
+            squares[index].style.backgroundColor = "#232323";
+            msgDisplay = "Try Again";
       }
       display();
 }
@@ -28,7 +41,6 @@ function generateColorArray(){
                   colorList.push(getRandomColor());
             }
       }
-
       return colorList;
 }
 
@@ -39,18 +51,6 @@ function getRandomColor(){
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
-}
-
-function pickColor(index){//compare color to targetColor
-      if(squares[index].style.backgroundColor.substring(3, squares[index].style.backgroundColor.length) == targetColor){
-            msgDisplay = "Correct!";
-            changeColors(squares[index].style.backgroundColor);
-      }
-      else {
-            squares[index].style.backgroundColor = "#232323";
-            msgDisplay = "Try Again";
-      }
-      display();
 }
 
 function changeColors(color){//Loop through all squares and change colors
