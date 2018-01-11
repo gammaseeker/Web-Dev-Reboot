@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html>
+	<head>
+		<title>Color Game </title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<meta charset="UTF-8">
+		<style> </style>
+		<script src = "index.js"> </script>
+	</head>
+	<body onload="initialize();">
+		<h1 id = "banner">The Great
+			<br />
+			<span id ="rgbCap">RGB</span><span id = "goal"></span>
+			<br />
+			Color Game</h1>
+
+		<div id = "stripe">
+			<button id ="resetBtn" onclick = "reset();">New Colors</button>
+			<span id="message"></span>
+			<button onclick="toggleDifficulty(false);" id="easyBtn">Easy</button>
+			<button onclick="toggleDifficulty(true);" class="selected" id="hardBtn">Hard</button>
+		</div>
+		<div id="container">
+			<div class="square" onclick="pickColor(0);"></div>
+			<div class="square" onclick="pickColor(1);"></div>
+			<div class="square" onclick="pickColor(2);"></div>
+			<div class="square" onclick="pickColor(3);"></div>
+			<div class="square" onclick="pickColor(4);"></div>
+			<div class="square" onclick="pickColor(5);"></div>
+		</div>
+	</body>
+
+</html>
