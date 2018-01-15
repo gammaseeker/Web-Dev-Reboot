@@ -4,7 +4,7 @@ function average(grades){
         sum += grades[i];
     }
     
-    return sum/grades.length;
+    return Math.round(sum/grades.length);
 }
 
 var scores = [90, 98, 89, 100, 100, 86, 94];
