@@ -6,6 +6,7 @@ app.get("/", function(req, res){
     //res.send("<h1>Welcome to the home page</h1>");
 });
 
+//Will look in views folder
 app.get("/fallinlovewith/:thing", function(req, res){
     var thing = req.params.thing;
     //res.send("You fell in love with " + thing);
