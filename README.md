@@ -1,2 +1,2 @@
 # Web-Dev-Reboot
-Relearning my web dev skills
+Massive refresher on web development skills
