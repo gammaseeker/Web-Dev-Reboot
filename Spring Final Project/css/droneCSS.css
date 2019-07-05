@@ -1,0 +1,159 @@
+.mainBackground
+{
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:-999;
+}
+.nameTop
+{
+	color: white;
+	font-family: Helvetica;
+	text-align: center;
+	font-size:36pt;
+}
+.dropdown 
+{
+	font: bold 18pt arial;
+	display: inline-block;
+	width: 22%;
+	cursor:pointer;
+	color: black;
+}
+.dropdown > a
+{
+	color: black;
+	text-decoration: none;
+}
+.dropdown:hover
+{
+	color: red;
+}
+a:hover
+{
+	color: red;
+}
+.containerMenu
+{
+	margin: auto;
+	text-align: center;		
+	background-color: #bdc3c7;
+	border-radius: 20px;
+	padding: 12px 24px;
+	border: solid black;
+}
+.btn
+{
+    font: bold 18pt verdana;
+    letter-spacing: -3px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.btn > img
+{
+    position: relative;
+    top: 5px;
+    left: -20px;
+    height: 60px;
+    width: 70px;
+    z-index: 1;
+}
+.botMenu
+{
+	margin: auto;
+	bottom: 0;
+	text-align:center;
+}
+.thumbnail
+{
+	display: inline-block;
+	cursor:pointer;
+	width: 90%;
+	height: auto;
+}
+#droneSelection
+{
+	display:none;
+}
+.background
+{
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:-999;
+	opacity:0;
+	transition-property: opacity;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	transition-delay: .3s;		
+}
+table
+{
+	margin-left:auto; 
+    margin-right:auto;
+	background-color: rgba(255,255,255, 0.5);
+	opacity:0;
+	transition-property: opacity;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	transition-delay: .3s;		
+}
+.slideshowContainer
+{
+	position:relative;
+	z-index: 0;
+}
+ul > li
+{
+
+    list-style-type: none;
+	display:inline-block;
+	width:15%;
+}
+html, body
+{
+	height: 100%;
+}
+ul
+{
+
+	bottom: 0;
+    padding: 12px 24px;
+	background-color: rgba(78, 97, 114, 0.75);
+    border-radius: 20px;
+    margin: auto;
+	height: 20%;
+}
+#title
+{
+	font-family: Helvetica;
+	text-align: center;
+}
+#cost
+{
+	font-size: 28pt;
+}
+#weight
+{
+	font-size: 28pt;
+}
+#classification
+{
+	font-size: 28pt;
+	color: red;
+}
+#speed
+{
+	font-size: 28pt;
+}
+.name
+{
+	color: white;
+	font-size: 18pt;
+	font-family: Helvetica;
+	font-weight:bold;
+}

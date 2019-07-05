@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> About Us</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/aboutCSS.css" />
+		<style> </style>
+		<script>
+		function initialize()
+		{
+			icon = document.getElementById("logo");
+		}
+		function hoverIcon()
+		{
+			icon.src = "images/logoHover.png";
+		}
+		function undoHover()
+		{
+			icon.src = "images/logo.png";
+		}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<img class = "background" src = "images/aboutBackground.png">
+		<h1> Aerial Nexus</h1>
+		<hr>
+		<div class = "containerMenu">	
+			<a href = "index.php" class = "btn">
+			<img onmouseover = "hoverIcon();" onmouseout = "undoHover();" id = "logo" src = "images/logo.png">
+			</a>
+			<span class = "dropdown"> <a href = "about.html"> About Us </a></span> 
+			<span class = "dropdown"> <a href = "drone.php">Drones </a></span> 
+			<span class = "dropdown"> <a href = "maps.php"> Map </a></span>
+			<span class = "dropdown"> <a href = "sponser.html">Sponsors </a></span>			
+		</div>
+		<div class = "banner"> 
+			<h1 class = "header"> THE FUTURE IN THE SKY</h1>
+			<img class = "bannerImage" src = "images/aboutBanner.jpg">
+		</div>
+		<div class = "container">
+			<p> Creativity is at the heart of every dream. Every idea, every groundbreaking leap that changes our world starts with the vision of talented creators. At Aerial Nexus, we give these creators the tools they need to bring their ideas to life.</p>
+			<p> Our platforms empower them to capture images that were once out of reach. Our flying and camera stabilization systems redefine camera placement and motion. Amazing photos and video, treasured personal memories, and high-end professional imagery are captured every day, in every corner of the world using Aerial Nexus products.</p>
+			<p> Aerial Nexus technology does more than simply enable creators. We push visionaries to go beyond the limits of what is thought possible, inspiring them to inspire the world.</p>
+			<p> We do this through an unparalleled commitment to R&D, a culture of constant innovation and curiosity, and a focus on transforming complex technology into easy-to-use devices. Building on the ethos of "form follows function," our products combine advanced technology with dynamic designs.</p>
+			<p> Headquartered in New York City, Aerial Nexus benefits from direct access to the suppliers, raw materials, and young, creative talent pool necessary for sustained success. Drawing on these resources, we have grown from a single small office in 2006 to a global workforce of over 3,000. Our offices can now be found in the United States, Germany, the Netherlands, Japan, Beijing and Hong Kong. As a privately owned and operated company, Aerial Nexus focuses on our own vision, supporting creative, commercial, and nonprofit applications of our technology.</p>
+			<p> Today, Aerial Nexus products are redefining industries. Professionals in filmmaking, agriculture, conservation, search and rescue, energy infrastructure, and more trust Aerial Nexus to bring new perspectives to their work and help them accomplish feats safer, faster, and with greater efficiency than ever before.</p>
+		</div>
+	</body>
+	
+</html>

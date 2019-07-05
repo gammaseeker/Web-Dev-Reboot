@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Aerial Nexus</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/sponserCSS.css" />
+		<style> </style>
+		<script> 
+			function initialize()
+			{
+				icon = document.getElementById("logo");
+				
+			}
+			function hoverIcon()
+			{
+				icon.src = "images/logoHover.png";
+			}
+			function undoHover()
+			{
+				icon.src = "images/logo.png";
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<img class = "background" src = "images/aboutBackground.png">
+		<h1> Aerial Nexus</h1>
+		<hr>
+		<div class = "containerMenu">		
+			<a href = "index.php" class = "btn">
+			<img onmouseover = "hoverIcon();" onmouseout = "undoHover();" id = "logo" src = "images/logo.png">
+			</a>
+			<span class = "dropdown"> <a href = "about.html"> About Us </a></span> 
+			<span class = "dropdown"> <a href = "drone.php">Drones </a></span> 
+			<span class = "dropdown"> <a href = "maps.php"> Map </a></span>
+			<span class = "dropdown"> <a href = "sponser.html">Sponsors </a></span>			
+		</div>
+		<h2> Sponsored by:</h2>
+		<div class = "sponContainer"> NASA </br><img src = "images/sponsor1.jpg"> </div>
+		<div class = "sponContainer"> The Memetero Foundation </br><img src = "images/sponsor2.jpg"> </div>
+		<div class = "sponContainer"> Brian University (BU) </br><img src = "images/sponsor3.jpg"> <img src = "images/sponsor4.jpg"></div>
+	</body>
+	
+</html>
