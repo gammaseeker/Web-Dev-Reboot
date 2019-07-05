@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style>
+			#userMaze
+			{
+				white-space: nowrap;
+				background-color: red;
+			}
+		</style>
+		<script>
+			function initialize()
+			{
+				theMaze = document.getElementById("userMaze");
+				sectionArray = [];
+				boolTrap = false;
+			}
+			function mazeSection(source)
+			{
+				this.sectionImg = source;//Prototype function. Makes obj
+				this.sectionTrap = false
+			}
+			function toggleTrap()
+			{
+				if(boolTrap == false)
+				{
+					boolTrap = true;
+				}
+				else
+				{
+					boolTrap = false;
+				}
+			}
+			function placeSection(imgSrc)
+			{
+				//Create object
+				var newSection = new mazeSection(imgSrc);
+				if(boolTrap == true)
+				{
+					newSection.sectionTrap = true;
+					newImg.style.opacity = .3;
+				}
+				sectionArray.push(newSection);
+				newImg = document.createElement("img");
+				newImg.src = imgSrc;
+				newImg.setAttribute("onclick", "deleteSection(this);");
+				newImg.mazeSectionObj = newSection;
+				theMaze.appendChild(newImg);
+			}
+			function nextLine()
+			{
+				linebr = document.createElement("br");
+				theMaze.appendChild(linebr);
+			}
+			function deleteSection(imgObject)
+			{
+				theMaze.removeChild(imgObject);
+				imgObject.parentElement.removeChild(imgObject);
+				sectionArray.splice(theMaze.indexOf(imgObject.mazeSectionObj), 1);
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<div>
+			<img onclick = "placeSection(this.src);" src = "mazeImages/bottomdeadend.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/cross.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/empty.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/horizontal.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/lbottomright.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/lbottomleft.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/leftdeadend.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/ltopleft.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/ltopright.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/rightdeadend.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/tdown.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/tleft.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/topdeadend.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/tright.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/tup.png">
+			<img onclick = "placeSection(this.src);" src = "mazeImages/vertical.png">
+			<button onclick = "nextLine();"> Next Line</button>
+			<button onclick = "toggleTrap();"> Toggle Trap</button>
+		</div>
+		<hr/>
+		<div id = "userMaze">
+		
+		
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style> </style>
+		<script src = "utilities.js"></script>
+		<script>
+			function initialize()
+			{
+				LOWER = 1, UPPER = 3;
+				
+				codeDisplay = document.getElementById("codeSpace");
+				checkDisplay = document.getElementById("codeCheck");
+				turnDisplay = document.getElementById("turn");
+				
+				userCodeString = "";
+				
+				difficultyCounter = 0;
+				
+			}
+			function randomCode()
+			{
+				generatedCodeString = "";
+				for(var i = 0; i<3; i++)
+				{
+					var temp = getRandomInteger(LOWER, UPPER);
+					generatedCodeString +=temp;
+				}
+				alert(generatedCodeString);
+			}
+			function constructCode(number)
+			{
+				userCodeString +=number;
+				codeDisplay.innerHTML = userCodeString;
+				vault = new vaultCode(userCodeString);
+				vault.checkCode();
+				playerTurn();
+			}
+			function vaultCode(code)
+			{
+				this.value = code;
+				
+				this.checkCode = function()
+				{
+					if(this.value == generatedCodeString)
+					{
+						displayString = "Correct";
+					}
+					else
+					{
+						if(this.value > generatedCodeString)
+						{
+							displayString = "Too high!";
+						}
+						else
+						{
+							if(this.value < generatedCodeString)
+							{
+								displayString = "Too low!";
+							}
+						}
+					}
+				}
+			}
+			function playerTurn()
+			{
+				
+				if(difficultyCounter == 0)
+				{
+					turnCounter = 3;
+					turnCounter--;
+					if(turnCounter < 1)
+					{
+						turnDisplay.innerHTML = "Out of Turns";
+					}
+					else
+					{
+						turnDisplay.innerHTML = turnCounter;
+					}
+				}
+				
+			}
+			function update()
+			{
+				checkDisplay.innerHTML = displayString;
+				userCodeString = "";
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<div id = "codeSpace">
+			Secret Code Goes Here
+		</div>
+		<div id = "codeCheck">
+			Correct or Incorrect?
+		</div>
+		<div id = "turn">
+			
+		</div>
+		<button onclick = "constructCode('1')"> 1</button>
+		<button onclick = "constructCode('2')"> 2</button>
+		<button onclick = "constructCode('3')"> 3</button>
+		<button onclick = "randomCode();"> Generate Random Code</button>
+		<button onclick = "update();"> Check User's Code</button>
+	</body>
+	
+</html>

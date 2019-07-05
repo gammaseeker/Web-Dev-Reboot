@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style> </style>
+		<script>
+			function initialize()
+			{
+				/*superhero = new Object();
+				superhero.city= "Software Major City";
+				superhero.name= "Mr. Ip";
+				superhero.reputation= "Legendary";
+				f2 = f1;//Creates new address with same function
+				f2();*/
+				
+				citySpan = document.getElementById("currentCity");
+				nameSpan = document.getElementById("currentName");
+				inputName = document.getElementById("nameInput");
+				inputCity = document.getElementById("cityInput");
+				inputAdventure = document.getElementById("adventureInput");
+				
+				hero = new superhero("Iron man", "New York");
+			//	hero.haveAdventure();
+			}
+			/*function f1()
+			{
+				alert("f1");
+			}*/
+			function superhero(n, c)
+			{
+				this.sName = n; //this contains memory address
+				this.sCity = c;
+				this.sRep = 0;
+				
+				this.haveAdventure = function ()
+				{
+					
+				}
+			}
+			function update()
+			{
+				
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<h1> Mr. Ip</h1>
+		<div> 
+			Hailing from <span id = "currentCity">Software City</span>, <span id = "currentName"> Mr. Ip </span> has been on many heroic adventures including:
+		</div>
+		</hr>
+		<div id = "adventure"> Roasting Media Major </div>
+		<div> Change Name
+			<input type="text" id = "nameInput"> </input>
+		</div>
+		<div> Move City
+			<input type="text" id = "cityInput"> </input>
+		</div>
+		<div> Describe Last Adventure
+			<input type="text" id = "adventureInput"> </input>
+		</div>	
+		<button> Change</button>		
+	</body>
+	
+</html>
