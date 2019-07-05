@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html>
+	<head> <!-- I am the child of the html tag -->
+		<title> Add Subtract Multiply Divide </title> <!-- Text in tabs -->
+		<style> 
+			/*
+				This is a CSS
+			*/
+		</style> <!-- CSS goes in here -->
+		
+		<script>
+			function initialize()
+			{
+				createVariables(); 
+				
+			}
+			
+			function createVariables()
+			{
+				x = 3;
+				y = 7;
+				
+			}
+			
+			function add()
+			{
+				answer = x+y;
+				outputmsg = x + "+" + y + "=" + answer;
+				alert(outputmsg);
+			}
+			
+			function subtract()
+			{
+				answer = x-y;
+				outputmsg = x + "-" + y + "=" + answer;
+				alert(outputmsg);
+				
+			}
+			
+			function multiply()
+			{
+				answer = x*y;
+				
+			}
+			
+			function divide()
+			{
+				answer = x/y;
+				
+			}
+			
+		</script> <!-- Javascript goes in here --> 
+	</head>
+	<body onload = "initialize();"> 
+		<!-- Hello World!<br /> -->
+		<div>
+			0
+		</div>
+			<button onclick = "add()"> 
+				Add 
+			</button>
+			<button onclick = "subtract()"> 
+				Subtract
+			</button>
+		
+	</body>
+</html>

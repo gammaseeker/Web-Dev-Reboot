@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title>Dynamic Color Change </title>
+		<style> </style>
+		<script>
+			function initialize()
+			{
+				colorBoxElement = document.getElementById("colorbox"); //holds object not string
+				redBack = 255;
+				blueBack = 255;
+				greenBack = 255;
+				modifier = 0;
+			}
+			//all we need is value since subtraction is adding negative numbers
+			function modifyRed()
+			{
+				redBack = redBack + modifier;
+			}
+			function modifyGreen()
+			{
+				greenBack = greenBack + modifier;
+			}
+			function modifyBlue()
+			{
+				blueBack = blueBack + modifier;
+			}
+			//Add1, Subtract1, Add5, Subtract5, Add10,Subtract10
+			/*
+			function add1Red()
+			{
+				redBack = redBack + 1;
+			}
+			function subtract1Red()
+			{
+				redBack = redBack - 1;
+			}
+			function add5Red()
+			{
+				redBack = redBack + 5;
+			}
+			function subtract5Red()
+			{
+				redBack = redBack - 5;
+			}
+			function add10Red()
+			{
+				redBack = redBack + 10;
+			}
+			function subtract10Red()
+			{
+				redBack = redBack - 10;
+			}
+			function add1Blue()
+			{
+				blueBack = blueBack + 1;
+			}
+			function subtract1Blue()
+			{
+				blueBack = blueBack - 1;
+			}
+			function add5Blue()
+			{
+				blueBack = blueBack + 5;
+			}
+			function subtract5Blue()
+			{
+				blueBack = blueBack -5;
+			}
+			function add10Blue()
+			{
+				blueBack = blueBack + 10;
+			}
+			function subtract10Blue()
+			{
+				blueBack = blueBack - 10;
+			}
+			function add1Green()
+			{
+				greenBack = greenBack + 1;
+			}
+			function subtract1Green()
+			{
+				greenBack = greenBack - 1;
+			}
+			function add5Green()
+			{
+				greenBack = greenBack + 5;
+			}
+			function subtract5Green()
+			{
+				greenBack = greenBack - 5;
+			}
+			function add10Green()
+			{
+				greenBack = greenBack + 10;
+			}
+			function subtract10Green()
+			{
+				greenBack = greenBack -10;
+			
+			}
+			*/
+			function drawColors()
+			{
+				rgbString = "rgb(" + redBack + "," + greenBack + "," + blueBack + ")";
+				colorBoxElement.innerHTML= rgbString;
+				document.body.style.backgroundColor = rgbString; //style is object
+				colorBoxElement.innerHTML=rgbString;
+			}
+			
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<div id = "colorbox"> 
+			rgb(255,255,255)
+		</div>
+		<button onClick = "modifier = 1; modifyRed(); drawColors();"> Add 1 Red </button>
+		<button onClick = "modifier = -1; modifyRed(); drawColors();"> Subtract 1 Red </button>
+		<button onClick = "modifier = 5; modifyRed(); drawColors();"> Add 5 Red </button>
+		<button onClick = "modifier = -5; modifyRed(); drawColors();"> Subtract 5 Red </button>
+		<button onClick = "modifier = 10; modifyRed(); drawColors();"> Add 10 Red </button>
+		<button onClick = "modifier = -10; modifyRed(); drawColors();"> Subtract 10 Red </button>
+	<div>
+		<button onClick = "modifier = 1; modifyGreen(); drawColors(); "> Add 1 Green</button>
+		<button onClick = "modifier = -1; modifyGreen(); drawColors(); "> Subtract 1 Green </button>
+		<button onClick = "modifier = 5; modifyGreen(); drawColors(); "> Add 5 Green </button>
+		<button onClick = "modifier = -5; modifyGreen(); drawColors(); "> Subtract 5 Green</button>
+		<button onClick = "modifier = 10; modifyGreen(); drawColors(); "> Add 10 Green</button>
+		<button onClick = "modifier = -10; modifyGreen(); drawColors(); "> Subtract 10 Green</button>
+	</div>
+		<button onClick = "modifier = 1; modifyBlue(); drawColors(); "> Add 1 Blue</button>
+		<button onClick = "modifier = -1; modifyBlue(); drawColors(); "> Subtract 1 Blue</button>
+		<button onClick = "modifier = 5; modifyBlue(); drawColors(); "> Add 5 Blue </button>
+		<button onClick = "modifier = -5; modifyBlue(); drawColors(); "> Subtract 5 Blue </button>
+		<button onClick = "modifier = 10; modifyBlue(); drawColors(); "> Add 10 Blue </button>
+		<button onClick = "modifier = -10; modifyBlue(); drawColors(); "> Subtract 10 Blue </button>
+		
+		
+	</body>
+	
+</html>

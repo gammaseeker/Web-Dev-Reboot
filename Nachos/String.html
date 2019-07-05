@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style> </style>
+		<script> 
+			function initialize()
+			{
+				str = "mississippi";
+				//alert(str.length);
+				//alert(str[2]);
+				str[2] = "?";//Don't think of string as array
+				//alert(str);
+				str.length = 4;
+				alert(str.length);
+				c = str.charAt(5);//string
+				u = str.charCodeAt(5);//number
+				//alert(u);//115
+				//indexOf lastIndexOf
+				idx = str.indexOf("iss");
+				alert(idx);
+			}
+			
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		
+	</body>
+	
+</html>

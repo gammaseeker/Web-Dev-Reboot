@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> HTML Elements as Objects</title>
+		<style> </style>
+		<script>
+			function initialize()
+			{	
+				counterElement = document.getElementById("mycounter");
+				//counterElement.innerHTML = 50;
+				ctr = 0; //backend representation of counter
+			}
+			function add()
+			{	
+				ctr = ctr + 1; //new value being restored into variable
+			}
+			function subtract()
+			{
+				ctr = ctr - 1;
+			}
+			function drawCounter()
+			{
+				counterElement.innerHTML = ctr;
+			}
+		</script>
+	</head>
+	<body onload = "initialize()"> 
+		<div id = "mycounter">
+			0
+		</div>
+		<button onClick ="add(); drawCounter();" > Add 1 </button>
+		<button onClick = "subtract(); drawCounter();"> Subtract 1 </button>
+	</body>
+	
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Grocery List </title>
+		<style>
+			body
+			{
+				background-color: rgb(153, 51, 51);
+			}
+			h1
+			{
+				text-align:center;
+			}
+			#section1
+			{
+				text-align:center;
+			}
+			#section2
+			{
+				float: left;
+				margin: auto; 
+				border: 2px solid #CCCC99;
+				padding-left: 70px;
+				padding-right: 70px;
+				font-size: 120%
+			}
+			#section3
+			{
+				float: right;
+				margin: auto;
+				background-color: #3399FF;
+				color: black;
+				width: 300px;
+			}
+			.text
+			{
+				color: #CCCC99;
+				font-family: Berlin Sans FB;
+				
+			}
+			.ctrlButton
+			{
+				text-align: center;
+				
+			}
+		</style>
+		<script>
+			function initialize()
+			{
+				itmInput = document.getElementById("addItem"); //Section 1 input
+				indexInput = document.getElementById("listIndex"); //Section 3 input
+				myList = document.getElementById("theList"); //Section 2 display
+				grocIndex = [];
+				indexCtr = 0;
+
+			}
+			function addList()
+			{
+				grocIndex[indexCtr] = itmInput.value; //setting input to the index of array
+				
+			}
+			function removeList()
+			{
+
+				grocIndex.splice(indexInput.value, 1); //Take out that specific item
+				
+			}
+			function upList()
+			{
+				var targetItem = grocIndex[indexInput.value]; //The index you put in
+				var swapItem = grocIndex[indexInput.value - 1]; //The other item to be swapped
+				if(grocIndex[indexInput.value - 1] == null)
+				{
+					return; //Make sure if there is nothing to swap with, the program won't swap
+				}
+				else
+				{
+					
+					grocIndex.splice(parseInt(indexInput.value), 1, swapItem);
+					grocIndex.splice(parseInt(indexInput.value - 1), 1, targetItem);
+					
+				}
+				indexInput.value = parseInt(indexInput.value) - 1; //Bonus #2
+				
+			}
+			function downList()
+			{
+				var targetItem = grocIndex[indexInput.value]; //The index you put in
+				var swapItem = grocIndex[parseInt(indexInput.value) + 1]; //The other item to be swapped
+				if(grocIndex[parseInt(indexInput.value) + 1] == null)
+				{
+					return; //Make sure if there is nothing to swap with, the program won't swap
+				}
+				else
+				{
+					
+					grocIndex.splice(indexInput.value, 1, swapItem);
+					grocIndex.splice(parseInt(indexInput.value) + 1, 1, targetItem);
+				}
+				indexInput.value = parseInt(indexInput.value) + 1; //Bonus #2
+			}
+			function display()
+			{
+				myList.innerHTML = ""; //Erase list
+				indexCtr = 0;
+				while(indexCtr < grocIndex.length ) //Draw new list
+				{		
+					myList.innerHTML += indexCtr + ". " + grocIndex[indexCtr] + "</br>";
+					indexCtr++;	
+				}
+				itmInput.value = "";
+				
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<h1 class= "text"> Grocery List </h1>
+		<div id = "section1" class= "text"> Section 1: <input id = "addItem" type = "text"> <button onclick = "addList(); display();"> Add item to list</button> </div>
+		<div id = "section2" class= "text"> <h1> List</h1> Section 2:
+		<div id = "theList" class= "text"> 
+
+		</div>
+		</div>
+		<div id = "section3" class= "text"><h1> Control Panel </h1> Section 3: <input id = "listIndex" type = "text"> </br>
+			<div class ="ctrlButton">
+				<button class ="ctrlButton" onclick = "upList(); display();"> Up 1</button> </br>
+				<button class ="ctrlButton" onclick = "downList(); display();"> Down 1</button></br>
+				<button class ="ctrlButton" onclick = "removeList(); display();"> Remove </button>
+			</div>
+		</div>
+		
+	</body>
+	
+</html>
