@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	STEP 1
+	Write the HTML portion of the page including the text box and the button.
+	
+	NOTE: No form is used in this file.
+	
+	STEP 2
+	Write the sendRequest function
+	
+	An XHR is a request sent to the server without having to reload the page.  The XMLHttpRequest object holds all of the information for the request and receives the information from the server side script.
+	
+	The object will have the following properties:
+	onreadystatechange:  should be assigned the function to be called when the request is complete.  This function cannot take parameters.
+	
+	readyState:  Holds a number indicating the state of the request.
+	Description
+	0- The request is not initialized
+	1- The request has been set up
+	2- The request has been sent
+	3- The request is in process
+	4- The request is complete
+	
+	responseText:  The data sent back from the server
+	
+	The object will have the following functions:
+	open (GET or POST, server file, asynchronous)
+		The GET or POST determines how the data is to be sent.
+		The server file is the server side script that will handle the request.
+		Asynchronous is a boolean that tells the system to handle the request asynchronously or not (this will almost always be TRUE).
+		
+	send (parameters)
+	Information sent to the server as part of the request can be posted using GET by creating a URL and passing that into the server file parameter.  In this case, you'd pass null into the send() function.  It can also be posted using POST by setting a separate parameter string and passing that into send.  In this case, you would also need to call the setRequestHeader function in order to setup the server for receipt of the information.
+	
+	STEP 3
+	Write the PHP file.
+	
+	A PHP file on its own, with no HTML, still needs to have the PHP tag.
+	
+	We used "GET" as our method of transferring data.  Using POST requires additional information passed into the send function.  Using GET is not unsecure because the PHP file will have no HTML and will not be downloaded to the client machine.  The query string never shows up in the URL.
+	
+	This very simple test looks for specific foods and returns a food group based on them.
+	
+	Remember that echo writes code to the page.  In this case, there is no "page" that is being downloaded.  The request has been made by the XHR object.  Whenever echo is called, it writes, instead, to the XHR object's property "responseText".
+-->
+<html>
+	<head>
+		<title>AJAX Test</title>
+		<style>
+			body, input
+			{
+				font:bold 26pt calibri;
+			}
+		</style>
+		<script type = "text/javascript">
+			function initialize()
+			{
+				foodGroupOut = document.getElementById("foodgroup");
+				foodIn = document.getElementById("txt_foods");
+			}
+			
+			function sendRequest()
+			{
+				var req = new XMLHttpRequest();
+					
+				req.onreadystatechange = function()
+					{
+						if (req.readyState == 4)
+						{
+							foodGroupOut.innerHTML = req.responseText;
+						}
+					}
+					
+				var url = "foods.php?food=" + foodIn.value;
+				req.open("GET", url, true);
+				req.send(null);
+			}
+		</script>
+	</head>
+		
+	<body onload = "initialize();">
+		Type a Food:  <input type = "text" id = "txt_foods" />
+		<input type = "button" value = "Check the food group" onclick = "sendRequest();" /><br />
+		
+		<div id = "foodgroup"></div>
+	</body>
+</html>
