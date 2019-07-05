@@ -1,0 +1,153 @@
+.background
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+	z-index: -2;
+}
+h1
+{
+	text-align:center;
+	background-color: #E6C580;
+	/*border:  15px solid blue;*/
+	border-radius: 15px;
+	
+	/* rgb #(66, 33, 00)Dark brown #E6C580 Light tan*/
+	/*font*/
+	display: inline block;
+	margin-left: 20%;
+	margin-right: 20%;
+	color: rgb(66, 33, 00);
+}
+h1 > span
+{
+	font-size: 50px;
+	font-family: papyrus;
+}
+
+#scroll
+{
+	z-index: -1;
+
+}
+.menulist
+{		
+
+	text-align: left;
+	width: 15%;
+	display:inline block;
+	margin-left: 5%;
+	position: fixed;
+	margin-top: 3%;
+	margin-left: 5%;
+}
+.menulist > span
+{
+	
+    padding: 12px 24px;
+    background-color: #E6C580;
+    border-radius: 15px;
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
+	color: rgb(66, 33, 00);
+	margin-bottom:20px;
+	width: 70%;
+}
+.menulist > img
+{
+	display: block;
+	/*margin-left: auto; 
+	margin-right: auto;*/
+}
+#scroll
+{
+	display: inline block;
+	z-index: -1;
+	display: block;
+	position:fixed;
+	top: 10%;
+	width:35%;
+	height: 70%;
+	overflow:none;
+}
+
+#rip
+{	
+	position:fixed;
+	top:20%;
+	right: 38%;
+	opacity:0.5;
+	width:10%;
+}
+.text
+{
+	display: none;
+	overflow: auto;
+	width: 500px;
+	height: 600px;
+	position: fixed;
+	top: 20%;
+	right: 40%;
+	width: 27%;
+	height: 40%;
+	text-align:justify;
+	color: rgb(66, 33, 00);
+}
+
+.name:hover
+{
+	font-style:italic;
+	color: #E6C580;
+	background-color: rgb(66, 33, 00);
+
+}
+.elder:hover
+{
+	font-style:italic;
+	color: #E6C580;
+	background-color: rgb(66, 33, 00);
+	
+}
+.school:hover
+{
+	font-style:italic;
+	color: #E6C580;
+	background-color: rgb(66, 33, 00);
+	
+}
+.goodevil:hover
+{
+	font-style:italic;
+	color: #E6C580;
+	background-color: rgb(66, 33, 00);
+	
+}
+.containter
+{
+	margin-left: 30%;
+	text-align:center;
+	overflow: none;
+}
+.containter > div
+{
+	overflow: auto;
+}
+#small
+{
+	position:relative;
+	left:30%;
+	width: 30%;
+}
+#startup
+{
+	position: fixed;
+	top: 20%;
+	right: 40%;
+	width: 27%;
+	height: 40%;
+	color: rgb(66, 33, 00);
+	display: inline;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Stone Game</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/stone.css" />
+		<style> 
+			
+		</style>
+		<script src = "js/stone.js"> 
+			
+			
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<div id="title">
+			Stone Game
+		</div>
+		<div id ="unkTitle">
+			Unk's comments
+		</div>
+		<div id= "comments"> 
+			There are 3 piles of stones.  On your turn, click a button to take stones from the pile.  On our turn, we will do the same.  Whichever of us removes the last stone from the board is the loser. We will go first
+		</div>
+		
+		<div>
+			<button id = "start"onClick = "computer(); limit(); display(); hide();"> Start! </button> 
+		</div>
+			
+			<div id="pile1Div">
+				Pile 1 : 
+				<span id = "pile1">
+					3
+				</span> <br>
+				<button onClick = "modifyPile1(1); display();"> Take 1 stone </button> <br>
+				<button onClick = "modifyPile1(2); display();"> Take 2 stones </button> <br>
+				<button onClick = "modifyPile1(3); display();"> Take 3 stones </button> <br>
+			
+			
+			</div>
+			
+		
+			<div id = "pile2Div">
+				Pile 2:
+				<span id = "pile2">
+					3
+				</span> <br>
+				<button onClick = "modifyPile2(1); display();" > Take 1 stone </button> <br>
+				<button onClick = "modifyPile2(2); display();"> Take 2 stones </button> <br>
+				<button onClick = "modifyPile2 (3); display();"> Take 3 stones</button> <br>
+				
+				
+			</div>
+		
+			<div id="pile3Div">
+				Pile 3:
+				<span id = "pile3">
+					3
+				</span><br>
+				<button onClick = "modifypile3(1); display();"> Take 1 stone</button> <br>
+				<button onClick = "modifypile3(2); display();"> Take 2 stones </button> <br>
+				<button onClick = "modifypile3(3); display();"> Take 3 stones</button> <br>
+				
+			</div>
+			<div>
+				Pile 1
+				<img src = "rocks-clipart-9iRR9eLpT.png" />
+				Pile 2
+				<img src = "rocks-clipart-9iRR9eLpT.png" />
+				Pile 3 
+				<img src = "rocks-clipart-9iRR9eLpT.png" />
+			</div>
+		
+	</body>
+	
+</html>

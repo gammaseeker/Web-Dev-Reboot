@@ -1,0 +1,53 @@
+body
+{
+	background-color: rgb(102, 51, 0);
+}
+#title
+{
+	font-size:24pt;
+	font-weight:bold;
+	color:white;
+}
+#unkTitle
+{
+	font-size: 16pt;
+	text-decoration : underline;
+	color:white;
+}
+div
+{
+	text-align:center;
+	color:white;
+}
+#comments
+{
+	border-style: inset;
+	font-size: 20pt;
+	font-family:Bradley Hand ITC;
+	font-weight: bold;
+	text-align:center;
+	color:white;
+}
+#pile1Div
+{
+	text-align:center;
+	color:white;
+	
+}
+#pile2Div
+{
+	color:white;
+	text-align:center;
+	
+}
+#pile3Div
+{
+	text-align:center;
+	color:white;
+}
+#pileImg
+{
+	text-align : center;
+	
+	height: 10px;
+}
