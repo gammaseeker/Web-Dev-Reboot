@@ -1,0 +1,67 @@
+body
+{
+	text-align:center;
+	margin:auto;
+	background-color:#80d4ff;
+}
+h1
+{
+	color:red;
+	font-size:9vw;
+	margin:8px;
+	text-align:center;
+	font-family:Algerian;
+}
+span
+{
+	border-style:solid;
+	border-width:10pt;
+}
+td
+{
+	width:50%;
+	font-size:4.3vw;
+	font-family:harrington;
+}
+img
+{
+	width:100%;
+}
+button
+{
+	font-size: 25pt;
+	font-family:comic sans ms;
+	margin:15px;
+	background-color:#80d4ff;
+	border-radius:50px;
+	border-color:#003300;
+	color:#003300;
+}
+.employ
+{
+	list-style-type:circle;
+}
+ol
+{
+	margin:5px;
+	text-align:left;
+}
+h2
+{
+	font-family:comic sans ms;
+	font-size:6vw;
+	margin:0px;
+}
+li
+{
+	color:#990000;
+	font-size:3vw;
+	margin-left:5%;
+	margin-right:5%;
+}
+button:hover
+{
+	cursor: pointer;
+	background-color:#003300;
+	color:#80d4ff;
+}

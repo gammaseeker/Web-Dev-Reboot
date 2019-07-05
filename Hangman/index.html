@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!--Joey Jiemjitpolchai-->
+<html>
+	<head>
+		<title> Hangman </title>
+		<style></style> 
+		<script src = "js/hangman.js"></script>
+	</head>
+	<body onload = "initialize();">
+		<h1>HANGMAN</h1>
+		<div>
+			<img id = "gallows" src = "images/gallows1.png">
+		</div>
+		<div>
+			<span id = "puzzleDisplay"></span>
+		</div>
+		<div>
+			<input id = "submitAnswer" type = "text">
+			<button onclick="guessTheEntirePuzzle()">
+				Submit 
+			</button>
+		</div>
+		<div id= "buttonContainer">
+			<button onclick = "checkGuess('A');this.disabled=true;"> A </button>
+			<button onclick = "checkGuess('B');this.disabled=true;"> B </button>
+			<button onclick = "checkGuess('C');this.disabled=true;"> C </button>
+			<button onclick = "checkGuess('D');this.disabled=true;"> D </button>
+			<button onclick = "checkGuess('E');this.disabled=true;"> E </button>
+			<button onclick = "checkGuess('F');this.disabled=true;"> F </button>
+			<button onclick = "checkGuess('G');this.disabled=true;"> G </button>
+			<button onclick = "checkGuess('H');this.disabled=true;"> H </button>
+			<button onclick = "checkGuess('I');this.disabled=true;"> I </button>
+			<button onclick = "checkGuess('J');this.disabled=true;"> J </button>
+			<button onclick = "checkGuess('K');this.disabled=true;"> K </button>
+			<button onclick = "checkGuess('L');this.disabled=true;"> L </button>
+			<button onclick = "checkGuess('M');this.disabled=true;"> M </button>
+			<button onclick = "checkGuess('N');this.disabled=true;"> N </button>
+			<button onclick = "checkGuess('O');this.disabled=true;"> O </button>
+			<button onclick = "checkGuess('P');this.disabled=true;"> P </button>
+			<button onclick = "checkGuess('Q');this.disabled=true;"> Q </button>
+			<button onclick = "checkGuess('R');this.disabled=true;"> R </button>
+			<button onclick = "checkGuess('S');this.disabled=true;"> S </button>
+			<button onclick = "checkGuess('T');this.disabled=true;"> T </button>
+			<button onclick = "checkGuess('U');this.disabled=true;"> U </button>
+			<button onclick = "checkGuess('V');this.disabled=true;"> V </button>
+			<button onclick = "checkGuess('W');this.disabled=true;"> W </button>
+			<button onclick = "checkGuess('X');this.disabled=true;"> X </button>
+			<button onclick = "checkGuess('Y');this.disabled=true;"> Y </button>
+			<button onclick = "checkGuess('Z');this.disabled=true;"> Z </button>
+		</div>
+		
+		<button onclick = "reset()"> Reset </button>
+	</body>
+</html>

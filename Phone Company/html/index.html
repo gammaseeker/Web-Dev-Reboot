@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Phone Company</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/phoneCompany.css" />
+		<style> </style>
+		<script src = "js/utilities1.js"></script>
+		<script src = "js/phone.js"> </script>
+	</head>
+	<body onload = "initialize();"> 
+		<h1 id = "header"> Peak Wireless</h1>
+		<img class = "back" src = "images/background3.png">
+		<table id = "mytbl">
+			<tr>
+				<th colspan= "7" > The Data</th>
+			</tr>
+			
+			<tr class = "subhead">  
+				<td> Index </td>
+				<td> Last Name</td>
+				<td> First Name</td>
+				<td> Phone Number</td>
+				<td> MB</td>
+				<td> Plan</td>
+				<td> Total Bill</td>
+			</tr>
+		</table>
+		<div><button id = "start" onclick = "generateRandomPerson(); disappear();"> Simulate </button></div>
+	</body>
+	
+</html>

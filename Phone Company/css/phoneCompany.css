@@ -1,0 +1,41 @@
+#header
+{
+	text-align: center;
+	color: #E6E6DC;
+	font-size: 36pt;
+}
+table
+{
+	border:18px outset cornflowerblue;
+	margin:auto;
+	width: 75%;
+	text-align:center;
+}
+
+.back
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+	z-index: -999;	
+}
+div
+{
+	text-align:center;	
+}
+button
+{
+	display: inline;
+}
+th
+{
+	font-size: 24pt;
+	
+}
+td
+{
+	font-size: 20pt;
+	border-bottom: thick solid green;
+}

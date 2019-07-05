@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai, Anna Ho, Matthew Nguyen, Jiayan Chen -->
+<html> 
+	<head> 
+		<title> The Office</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/office.css" />
+		<style>
+		</style>
+		<script src = "js/office.js">
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<img class = "back" src = "images/clip.jpg"/>
+		<img onclick = "placeRoom(this.src); display();"src = "images/proto1.png" width = "150" height = "100">
+		<img onclick = "placeRoom(this.src); display();" src = "images/proto2.png" width = "150" height = "100">
+		<img onclick = "placeRoom(this.src); display();" src = "images/proto3.png" width = "150" height = "100">
+		<img onclick = "placeRoom(this.src); display();" src = "images/proto4.png" width = "150" height = "100"> 
+		<hr />
+		<div id = "building"> </div>
+		<div class = "cc">
+		<div id = "ctrContainer">
+			<span id = "moneyDisplay">Money: $0.00</span> </br>
+			<span id = "electricityDisplay">Electricity: 0 </span> </br>
+			<span id = "materialDisplay">Material: 0 </span> </br>
+			<span id = "foodDisplay"> Food and Water: 0</span> </br>
+		</div></br>
+		<button onclick = "start();"> Start</button><br /></br>
+		<button onclick = "employeeConstructor();"> Generate Employee</button> <br /></br>
+		<button onclick = "hireEmployeeTextBox()"> Hire Employee; Place in room:</button> <br />
+		<input type = "number" id = "hireEmployee"> </input><br /></br>
+		<button onclick = "switchEmployeesTextBox();"> Switch Employee By ID </button> <br />
+		<input type = "number" id = "switch1"> </input>  <br />
+		<input type = "number" id = "switch2"> </input>
+		</div>
+		
+		<table class = "cc" id = "mytbl"> 
+			<tr>
+				<th colspan= "5"> Employees</th>
+			</tr>
+			<tr class = "subhead">  
+				<td> First Name </td>
+				<td> Last Name</td>
+				<td> Characteristic</td>
+				<td> Location</td>
+				<td> ID</td>
+			</tr>
+		</table>
+	</body>
+	
+</html>
