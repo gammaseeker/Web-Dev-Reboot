@@ -1,0 +1,233 @@
+body
+{
+    height: 90vh;
+}
+div, h1
+{
+	text-align: center;
+}
+h1
+{
+    font: 36pt tahoma;
+    color: #2C3E50;
+	
+}
+img
+{
+    z-index: -1;
+
+}
+hr
+{
+    width: 100%;
+}
+div > .menu
+{
+    text-align: center;
+}
+.menulist
+{
+    width: 80%;
+    padding: 12px 24px;
+    background-color: LightSeaGreen;
+    border-radius: 20px;
+    margin: auto;
+}
+li > a
+{
+    color: #ECF0F1;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+.btn
+{
+    font: bold 18pt verdana;
+    letter-spacing: -3px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.btn > img
+{
+    position: relative;
+    top: 5px;
+    left: -20px;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+}
+ul > li
+{
+    display: inline;
+    list-style-type: none;
+}
+.background
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+.demo:hover
+{
+    color: #F1C40F;
+}
+.about:hover
+{
+    color: #F1C40F;
+}
+.earth:hover
+{
+    color: #F1C40F;
+}
+.life:hover
+{
+    color: #F1C40F;
+}
+.stats:hover
+{
+    color: #F1C40F;
+}
+.involve:hover
+{
+    color: #F1C40F;
+}
+#homeSlide
+{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 70%;
+    width: 90%;
+    margin: 3% auto;
+}
+.homePage
+{
+    font: bold 18pt verdana;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(78, 97, 114, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}
+.aboutPage
+{
+    font: bold 18pt verdana;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(73, 56, 41, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}
+.ourEarthPage
+{
+    font: bold 18pt verdana;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(102, 114, 60, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}
+.wildlifePage
+{
+    font: bold 18pt verdana;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(192, 57, 43, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}
+.statisticsPage
+{
+    font: bold 18pt verdana;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(143, 59, 27, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}
+.getInvolvedPage
+{
+    font: bold 18pt verdana;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(133, 143, 154, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}
+.demoPage
+{
+    font: bold 18pt verdana;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    background-color: rgba(133, 143, 154, 0.75);
+    color: #ECF0F1;
+    border-radius: 20px;
+}    
+}
+/*************************
+    The following keyframes are animation rules for css. It will make the slides animate once activated or called.
+**************************/
+
+/*
+    This section of animations slides the frame from left to right.
+*/
+@-webkit-keyframes moveFromLeft 
+{
+	0% {left: -100%; display: block;}
+	100% {left: 0%;}
+}
+@keyframes moveFromLeft 
+{
+	0% {left: -100%; display: block;}
+	100% {left: 0%;}
+}
+@-webkit-keyframes moveToRight 
+{ 
+	0% {right: 0%;}
+	100% {display: none; right: -100%;}
+}
+@keyframes moveToRight 
+{ 
+	0% {right: 0%;}
+	100% {display: none; right: -100%;}
+}
+
+/*
+    This section slides the frame from right to left.
+*/
+@-webkit-keyframes moveFromRight
+{
+	0% {right: -100%; display: inline;}
+	100% {right: 0%;}
+}
+@keyframes moveFromRight
+{
+	0% {right: -100%; display: inline;}
+	100% {right: 0%;}
+}
+@-webkit-keyframes moveToLeft
+{ 
+	0% {left: 0%;}
+	100% {display: none; left: -100%;}
+}
+@keyframes moveToLeft
+{ 
+	0% {left: 0%;}
+	100% {display: none; left: -100%;}
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Zerg Splat </title>
+		<style> 
+			#comments
+				{
+					font-size: 20pt;
+					font-family:Bradley Hand ITC;
+					font-weight: bold;
+					text-align:center;
+				}
+		</style>
+		<script>
+			function initialize()
+			{
+				commentElement = document.getElementById("comments");
+				counterElement = document.getElementById("counter");	
+				bugSplat = 0;
+				newSource = "";
+				commentString = "";
+			}
+			function bugParameters(bug)
+			{
+				bugElement = document.getElementById(bug);
+			}
+			function runBugSplat()
+			{
+				splatNumber();
+				normalComments();
+				bugElement.style.pointerEvents = "none";
+				
+			}
+			function splat(source)
+			{
+					newSource = source;
+			}
+			function splatNumber()
+			{
+				bugSplat = bugSplat + 1;
+			}
+			function normalComments()
+			{
+				if(bugSplat % 2 == 0)
+				{
+					commentString = "Ouch";
+				}
+				else
+				{
+					if(bugSplat == 1)
+					{
+						commentString = "No! First blood";
+					}
+					else
+					{
+						if(bugSplat == 3)
+						{
+							commentString = "Our ferocity will strike fear in you!";
+						}
+						else
+						{
+							if(bugSplat == 5)
+							{
+								commentString = "We will retaliate!";
+							}
+							else
+							{
+								if(bugSplat == 7)
+								{
+									commentString = "Your corpse would look nice on our wall";
+								}
+								else
+								{
+									direComments();
+								}
+							}
+						}
+					}
+				}
+			}
+			function direComments()
+			{
+				if(bugSplat % 2 == 0)
+				{
+					commentString = "Ouch";
+				}
+				else
+				{
+					if(bugSplat == 9)
+					{
+						commentString = "Alright alright. You've proved your point!";
+					}
+					else
+					{
+						if(bugSplat == 11)
+						{
+							commentString = "Soldiers begin the retreat!"
+						}
+						else
+						{
+							if(bugSplat == 13)
+							{
+								commentString = "No No please mercy! You've already killed so many you monster!";
+							}
+							else
+							{
+								commentString = "You've killed us all."
+							}
+						}
+					}
+				}
+			}
+			function display()
+			{
+				bugElement.src = newSource;
+				commentElement.innerHTML = commentString;
+				counterElement.innerHTML = bugSplat;
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<div id = "comments"> You will never defeat us! </div>
+		<div id = "counter"> 0 </div>
+		<img id = "bug1" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug1'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug2" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug2'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug3" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug3'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug4" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug4'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug5" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug5'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug6" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug6'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug7" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug7'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug8" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug8'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug9" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug9'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug10" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug10'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug11" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug11'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug12" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug12'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug13" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug13'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug14" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug14'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+		<img id = "bug15" src = "Zergling_SC-G_Art1.jpg" height = "200" width = "200" onclick = "bugParameters('bug15'); runBugSplat(); splat('red-blood-splat-hi.png'); display();"></img>
+	</body>
+	
+</html>

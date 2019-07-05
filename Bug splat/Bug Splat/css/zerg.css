@@ -1,0 +1,22 @@
+#comments
+{
+	font-size: 20pt;
+	font-family:Bradley Hand ITC;
+	font-weight: bold;
+	text-align:center;
+	color: white;
+}
+div
+{
+	text-align: center;
+	font-size: 18pt;
+	color: white;
+}
+p
+{
+	text-align: center;
+}
+body
+{
+	background-image: url('../images/wasteland_video_intro.jpg');
+}

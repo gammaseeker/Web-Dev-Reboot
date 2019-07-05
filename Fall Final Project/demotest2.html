@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai  Brian Chiu-->
+<html> 
+	<head> 
+		<title> </title> <link type = "text/css" rel = "stylesheet" href = "demo.css"/> <link type = "text/css" rel = "stylesheet" href = "mainCSS.css" />
+		<style> 
+			table
+			{
+				margin:auto;
+				width: 75%;
+				text-align:center;
+			}
+=		</style>
+		<script> 
+			function initialize()
+			{
+				groundElement = document.getElementById("theGround");
+				ctr = 1;
+				
+			}
+			function addTree()
+			{
+				if(ctr >= 10)
+				{
+					return;
+				}
+				sourceString = ctr + ".png"; 
+				groundElement.src = sourceString;
+				ctr = ctr + 1;
+			}
+			function nuke()
+			{
+				groundElement.src = "nuke.png";
+			}
+			function foodWaste()
+			{
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<img class = "background" src = "MainBack.jpg">
+		<h1> Green Planet</h1>
+		<hr>
+		<div class = "menubar">
+			<ul class = "menulist">
+				<li>
+					<a href = "javascript:transition(HOME);" class = "btn">
+						<img class = "logo" src = "Icon.png">
+					</a>
+				</li>
+				<li>
+					<a href = "" class = "btn demo"> Demo </a>
+				</li>
+				<li>
+					<a href = "javascript:transition(ABOUT);" class = "btn about"> About </a>
+				</li>
+				<li>
+					<a href = "javascript:transition(EARTH);" class = "btn earth"> Our Earth </a>
+				</li>
+				<li>
+					<a href = "javascript:transition(WILDLIFE);" class = "btn life"> Protect Wildlife </a>
+				</li>
+				<li>
+					<a href = "javascript:transition(STATISTICS);" class = "btn stats"> Statistics </a>
+				</li>
+				<li>
+					<a href = "javascript:transition(INVOLVED);" class = "btn involve"> Get Involved </a>
+				</li>
+			</ul>
+		</div>
+		<table>
+			
+			<tr>
+				<td rowspan = "2"><img class = "groundImg" id = "theGround" src = "ground.png"></td>
+				<td><button onclick = "foodWaste();"><img class = "button" id = "foodWaste" src = "foodwaste.jpg" width = "300" height = "200"></button> </td>
+				<td><button onclick = "nuke();"><img class = "button" id = "nuclearWaste" src = "nuclearwaste.jpg"  height = "200"></button> </td>
+			</tr>
+			<tr>
+				<td><button onclick = "addTree();"><img class = "button" id = "tree" src = "tree.png" ></button> </td>
+				<td> <button onclick = "oil();"> <img class = "button" id = "oil" src = "oil.png" width = "200" height = "200"> </button> </td>
+			</tr>
+		</table>
+		<!--<div id = "forestBlock">
+			<img class = "groundImg" id = "theGround" src = "ground.png">
+		</div>-->
+
+	</body>
+	
+</html>

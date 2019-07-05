@@ -1,0 +1,25 @@
+p
+{
+	text-align: right;
+	float: right;
+}
+
+.groundImg
+{
+	margin-top: 100px;
+	z-index: -1;
+}
+#forestBlock
+{
+	border:thin solid black;
+	padding-left: 100px;
+	padding-right: 100px;
+	position:fixed;
+	/*left:5%;*/
+}
+table
+{
+	margin:auto;
+	width: 75%;
+	text-align:center;
+}

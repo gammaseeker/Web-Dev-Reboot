@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai  Brian Chiu-->
+<html> 
+	<head> 
+		<title> </title> <link type = "text/css" rel = "stylesheet" href = "css/demo.css"/> <link type = "text/css" rel = "stylesheet" href = "css/mainCSS.css" />
+		<style> </style>
+		<script src = "js/demo.js"> </script>
+	</head>
+	<body onload = "initialize();"> 
+		<img class = "background" src = "images/MainBack.jpg">
+		<h1> Green Planet</h1>
+		<hr>
+		<div class = "menubar">
+			<ul class = "menulist">
+				<li>
+					<a href = "Main.html" class = "btn">
+						<img class = "logo" src = "images/Icon.png">
+					</a>
+				</li>
+				<li>
+					<a href = "Demo.html" class = "btn demo"> Demo </a>
+				</li>
+				<li>
+					<a href = "About.html" class = "btn about"> About </a>
+				</li>
+				<li>
+					<a href = "Earth.html" class = "btn earth"> Our Earth </a>
+				</li>
+				<li>
+					<a href = "Wildlife.html" class = "btn life"> Protect Wildlife </a>
+				</li>
+				<li>
+					<a href = "Statistics.html" class = "btn stats"> Statistics </a>
+				</li>
+				<li>
+					<a href = "Involved.html" class = "btn involve"> Get Involved </a>
+				</li>
+			</ul>
+		</div>
+		<table>
+			
+			<tr>
+				<td rowspan = "2"><img class = "groundImg" id = "theGround" src = "images/ground.png"></td>
+				<td><button onclick = "foodTrash();"><img class = "button" id = "foodWaste" src = "images/foodwaste.jpg" width = "300" height = "200"></button> </td>
+				<td><button onclick = "nuke();"><img class = "button" id = "nuclearWaste" src = "images/nuclearwaste.jpg"  height = "200"></button> </td>
+			</tr>
+			<tr>
+				<td><button onclick = "addTree();"><img class = "button" id = "tree" src = "images/tree.png" ></button> </td>
+				<td> <button onclick = "oilSpill();"> <img class = "button" id = "oil" src = "images/oil.png" width = "200" height = "200"> </button> </td>
+			</tr>
+		</table>
+
+
+	</body>
+	
+</html>

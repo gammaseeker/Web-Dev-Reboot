@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai  Brian Chiu-->
+<html> 
+	<head> 
+		<title> </title><link type = "text/css" rel = "stylesheet" href = "mainCSS.css" /> <link type = "text/css" rel = "stylesheet" href = "demo.css"/>
+		<style>
+=		</style>
+		<script> 
+			function initialize()
+			{
+				groundElement = document.getElementById("theGround");
+				ctr = 1;
+				
+			}
+			function addTree()
+			{
+				if(ctr >= 10)
+				{
+					return;
+				}
+				sourceString = ctr + ".png"; 
+				groundElement.src = sourceString;
+				ctr = ctr + 1;
+			}
+			function nuke()
+			{
+				groundElement.src = "nuke.png";
+			}
+			function foodWaste()
+			{
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<!-- <img class = "background" src = "MainBack.jpg"> -->
+		<h1> Green Planet</h1>
+		<hr>
+		<div>
+		<a href = "About.html" class = "btn">  About </a>
+		<a href = "OurEarth.html" class = "btn"> Our Earth </a>
+		<a href = "ProtectWildlife.html" class = "btn">  Protect Wildlife </a>
+		<a href = "Statistics.html" class = "btn">  Statistics </a>
+		<a href = "GetInvolved.html" class = "btn"> Get Involved </a>
+		<a id = "current" href = "Demo.html" class = "btn"> Demo </a> 
+		</div>
+		<table>
+			<tr>
+				
+			</tr>
+		</table>
+		<div id = "forestBlock">
+			<img class = "groundImg" id = "theGround" src = "ground.png">
+		</div>
+		<p>	
+			
+			<button onclick = "foodWaste();"><img class = "button" id = "foodWaste" src = "foodwaste.jpg" width = "300" height = "200"></button>
+			<button onclick = "nuke();"><img class = "button" id = "nuclearWaste" src = "nuclearwaste.jpg"  height = "200"></button></br>
+			<button onclick = "addTree();"><img class = "button" id = "tree" src = "tree.png" ></button>
+		</p> 
+	</body>
+	
+</html>
