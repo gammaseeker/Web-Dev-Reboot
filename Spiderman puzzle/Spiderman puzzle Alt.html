@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Spiderman Puzzle</title>
+		<style>
+			#shuffleButton
+			{
+				text-align: center;
+			}
+		</style>
+		<script> 
+			function initialize()
+			{
+				sp1 = document.getElementById("s1");
+				sp2 = document.getElementById("s2");
+				sp3 = document.getElementById("s3");
+				sp4 = document.getElementById("s4");
+				sp5 = document.getElementById("s5");
+				sp6 = document.getElementById("s6");
+				sp7 = document.getElementById("s7");
+				sp8 = document.getElementById("s8");
+				sp9 = document.getElementById("s9");
+				sp10 = document.getElementById("s10");
+				sp11 = document.getElementById("s11");
+				sp12 = document.getElementById("s12");
+				sp13 = document.getElementById("s13");
+				sp14 = document.getElementById("s14"); 
+				sp15 = document.getElementById("s15");
+				sp16 = document.getElementById("s16"); 
+				victoryElement = document.getElementById("victory");
+				
+				originalSource1 = "images/sm1.png";
+				originalSource2 = "images/sm2.png";
+				originalSource3 = "images/sm3.png";
+				originalSource4 = "images/sm4.png";
+				originalSource5 = "images/sm5.png";
+				originalSource6 = "images/sm6.png";
+				originalSource7 = "images/sm7.png";
+				originalSource8 = "images/sm8.png"; 
+				originalSource9 = "images/sm9.png";
+				originalSource10 = "images/sm10.png";
+				originalSource11 = "images/sm11.png";
+				originalSource12 = "images/sm12.png";
+				originalSource13 = "images/sm13.png";
+				originalSource14 = "images/sm14.png";
+				originalSource15 = "images/sm15.png"; 
+				originalSource16 = "images/sm16.png";
+				
+				sp1.style.border = "none"; //Initialize the highlight values
+				sp2.style.border = "none";
+				sp3.style.border = "none";
+				sp4.style.border = "none";
+				sp5.style.border = "none";
+				sp6.style.border = "none";
+				sp7.style.border = "none";
+				sp8.style.border = "none";
+				sp9.style.border = "none";
+				sp10.style.border = "none";
+				sp11.style.border = "none";
+				sp12.style.border = "none";
+				sp13.style.border = "none";
+				sp14.style.border = "none";
+				sp15.style.border = "none";
+				sp16.style.border = "none";
+				
+				spImgArray = ["sm1.png", "sm2.png", "sm3.png", "sm4.png", "sm5.png", "sm6.png", "sm7.png", "sm8.png", "sm9.png", "sm10.png", "sm11.png", "sm12.png", "sm13.png", "sm14.png", "sm15.png", "sm16.png"];
+				
+				boolSource1 = true; //Makes sure a source is not used twice
+				boolSource2 = true;
+				boolSource3 = true;
+				boolSource4 = true;
+				boolSource5 = true;
+				boolSource6 = true;
+				boolSource7 = true;
+				boolSource8 = true;
+				boolSource9 = true;
+				boolSource10 = true;
+				boolSource11 = true;
+				boolSource12 = true;
+				boolSource13 = true;
+				boolSource14 = true;
+				boolSource15 = true;
+				boolSource16 = true;
+				
+				boolsp1 = true; //Makes sure a tile does not change twice
+				boolsp2 = true;
+				boolsp3 = true;
+				boolsp4 = true;
+				boolsp5 = true;
+				boolsp6 = true;
+				boolsp7 = true;
+				boolsp8 = true;
+				boolsp9 = true;
+				boolsp10 = true;
+				boolsp11 = true;
+				boolsp12 = true;
+				boolsp13 = true;
+				boolsp14 = true;
+				boolsp15 = true;
+				boolsp16 = true;
+				
+				
+				imgIdArray = [];
+				imgSourceArray = [];
+				
+				clickCount = 0;
+			}
+			function verifyBoolSp()
+			{
+				if(boolsp1 == true)
+				{
+					boolsp1 = false;
+				}
+				else
+				{
+					if(boolsp2 == true)
+					{
+						boolsp2 = false;
+					}
+					else
+					{
+						if(boolsp3 == true)
+						{
+							boolsp3 = false;
+						}
+						else
+						{
+							if(boolsp4 == true)
+							{
+								boolsp4 = false;
+							}
+							else
+							{
+								if(boolsp5 == true)
+								{
+									boolsp5 = false;
+								}
+								else
+								{
+									if(boolsp6 == true)
+									{
+										boolsp6 = false;
+									}
+									else
+									{
+										if(boolsp7 == true)
+										{
+											boolsp7 = false;
+										}
+										else
+										{
+											if (boolsp8 == true)
+											{
+												boolsp8 = false;
+											}
+											else
+											{
+												if(boolsp9 == true)
+												{
+													boolsp9= false;
+												}
+												else
+												{
+													if(boolsp10 == true)
+													{
+														boolsp10 = false;
+													}
+													else
+													{
+														if(boolsp11 == true)
+														{
+															boolsp11 = false;
+														}
+														else
+														{
+															if(boolsp12 == true)
+															{
+																boolsp12 = false;
+															}
+															else
+															{
+																if(boolsp13 == true)
+																{
+																	boolsp13 = false;
+																}
+																else
+																{
+																	if(boolsp14 == true)
+																	{
+																		boolsp14 = false;
+																	}
+																	else
+																	{
+																		if(boolsp15 == true)
+																		{
+																			boolsp15 = false;
+																		}
+																		else
+																		{
+																			boolsp16 = false;
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			function shuffle()
+			{
+				while (boolsp1 == true || boolsp2 == true || boolsp3 == true || boolsp4 == true || boolsp5 == true || boolsp6 == true|| boolsp7 == true || boolsp8 == true || boolsp9 == true || boolsp10 == true || boolsp11 == true || boolsp12  == true || boolsp13 == true || boolsp14 == true || boolsp15 == true || boolsp16 == true)
+				{
+					
+					rndNum = parseInt(Math.random() * 16) + 1;
+					if(rndNum == 1 && boolSource1 == true)
+					{
+						newSource = "images/sm1.png";
+						boolSource1 = false;
+						verifyBoolSp();
+						return newSource;
+					}
+					else
+					{
+						if (rndNum == 2 && boolSource2 == true)
+						{
+							newSource = "images/sm2.png";
+							boolSource2 = false;
+							verifyBoolSp();
+							return newSource;
+						}
+						else
+						{
+							if (rndNum == 3 && boolSource3 == true)
+							{
+								newSource = "images/sm3.png";
+								boolSource3 = false;
+								verifyBoolSp();
+								return newSource;
+							}
+							else
+							{
+								if(rndNum == 4 && boolSource4 == true)
+								{
+									newSource = "images/sm4.png";
+									boolSource4 = false;
+									verifyBoolSp();
+									return newSource;
+								}
+								else
+								{
+									if(rndNum == 5 && boolSource5 == true)
+									{
+										newSource = "images/sm5.png";
+										boolSource5 = false;
+										verifyBoolSp();
+										return newSource;
+									}
+									else
+									{
+										if(rndNum == 6 && boolSource6 == true)
+										{
+											newSource = "images/sm6.png";
+											boolSource6 = false;
+											verifyBoolSp();
+											return newSource;
+										}
+										else
+										{
+											if(rndNum == 7 && boolSource7 == true)
+											{
+												newSource = "images/sm7.png";
+												boolSource7 = false;
+												verifyBoolSp();
+												return newSource;
+											}
+											else
+											{
+												if(rndNum == 8 && boolSource8 == true)
+												{
+													newSource = "images/sm8.png";
+													boolSource8 = false;
+													verifyBoolSp();
+													return newSource;
+												}
+												else
+												{
+													if(rndNum == 9 && boolSource9 == true)
+													{
+														newSource = "images/sm9.png";
+														boolSource9 = false;
+														verifyBoolSp();
+														return newSource;
+													}
+													else
+													{
+														if(rndNum == 10 && boolSource10 == true)
+														{
+															newSource = "images/sm10.png";
+															boolSource10 = false;
+															verifyBoolSp();
+															return newSource;
+														}
+														else
+														{
+															if(rndNum == 11 && boolSource11 == true)
+															{
+																newSource = "images/sm11.png";
+																boolSource11 = false;
+																verifyBoolSp();
+																return newSource;
+															}
+															else
+															{
+																if(rndNum == 12 && boolSource12 == true)
+																{
+																	newSource = "images/sm12.png";
+																	boolSource12 = false;
+																	verifyBoolSp();
+																	return newSource;
+																}
+																else
+																{
+																	if(rndNum == 13 && boolSource13 == true)
+																	{
+																		newSource = "images/sm13.png";
+																		boolSource13 = false;
+																		verifyBoolSp();
+																		return newSource;
+																	}
+																	else
+																	{
+																		if(rndNum == 14 && boolSource14 == true)
+																		{
+																			newSource = "images/sm14.png";
+																			boolSource14 = false;
+																			verifyBoolSp();
+																			return newSource;
+																		}
+																		else
+																		{
+																			if(rndNum == 15 && boolSource15 == true)
+																			{
+																				newSource = "images/sm15.png";
+																				boolSource15 = false;
+																				verifyBoolSp();
+																				return newSource;
+																			}
+																			else
+																			{
+																				if(rndNum == 16 && boolSource16 == true)
+																				{
+																					newSource = "images/sm16.png";
+																					boolSource16 = false;
+																					verifyBoolSp();
+																					return newSource;
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}	
+			}
+			function greenHighlight(spImg)
+			{
+				var image = document.getElementById(spImg);
+				if(image.style.border == "none")
+				{
+					image.style.border = " thick solid green";
+					inputSource = image.src;
+					//getImages(spImg, inputSource);
+					switchImg(spImg);
+				}
+				else
+				{
+					image.style.border = "none";
+				}
+				
+			}
+			/*function getImages(imgId, imgSource)
+			{
+				imgIdObject = { id: imgId};
+				imgSourceObject = {source: imgSource};
+				imgIdArray.push(imgId);
+				imgSourceArray.push(imgSource);	 
+				//alert(imgSourceObject["source"]);
+				//alert (imgSourceArray[0]);
+				swapImages();
+				
+			}
+			function swapImages()
+			{
+				if (imgIdArray.length == 2 && imgSourceArray.length == 2)
+				{
+					document.getElementById(imgIdArray[0]).src = imgSourceArray[1];
+					document.getElementById(imgIdArray[1]).src = imgSourceArray [0];
+					initialize();
+				}
+				winCondition();
+			} */
+			function switchImg(theId)
+			{
+				if(clickCount == 0)
+				{
+					firstSelectElement = document.getElementById(theId);
+					firstSelect = firstSelectElement.src;
+					clickCount = 1;
+					return;
+				}
+				if(clickCount == 1)
+				{
+					secondSelectElement = document.getElementById(theId);
+					secondSelect = secondSelectElement.src;
+					firstSelectElement.src = secondSelect;
+					secondSelectElement.src = firstSelect;
+					clickCount = 0;
+				}
+			}
+			function winCondition()
+			{
+				if(sp1.src == originalSource1
+				&& sp2.src == originalSource2 
+				&& sp3.src == originalSource3
+				&& sp4.src == originalSource4 
+				&& sp5.src == originalSource5 
+				&& sp6.src == originalSource6 
+				&& sp7.src == originalSource7 
+				&& sp8.src == originalSource8
+				&& sp9.src == originalSource9 
+				&& sp10.src == originalSource10 
+				&& sp11.src == originalSource11 
+				&& sp12.src == originalSource12 
+				&& sp13.src == originalSource13
+				&& sp14.src == originalSource14
+				&& sp15.src == originalSource15
+				&& sp16.src == originalSource16)
+				{
+					victoryElement.innerHTML = "Congratulations you win!";
+				}
+			}
+			function displayShuffle()
+			{
+				sp1.src = shuffle();
+				sp2.src = shuffle();
+				sp3.src = shuffle();
+				sp4.src = shuffle();
+				sp5.src = shuffle();
+				sp6.src = shuffle();
+				sp7.src = shuffle();
+				sp8.src = shuffle();
+				sp9.src = shuffle();
+				sp10.src = shuffle();
+				sp11.src = shuffle();
+				sp12.src = shuffle();
+				sp13.src = shuffle();
+				sp14.src = shuffle();
+				sp15.src = shuffle();
+				sp16.src = shuffle();
+				initialize();
+			}
+				
+		</script>			
+	</head>
+	<body onload = "initialize();"> 
+		<div id = "victory">  </div>
+			<table>
+				<tr>
+					<td> <img id = "s1" onclick = "greenHighlight('s1');" src = "images/sm1.png" width ="200" height ="150" > </td>
+					<td> <img id = "s2" onclick = "greenHighlight('s2');" src = "images/sm2.png" width ="200" height ="150" > </td>
+					<td> <img id = "s3" onclick = "greenHighlight('s3');" src = "images/sm3.png" width ="200" height ="150" > </td>
+					<td> <img id = "s4" onclick = "greenHighlight('s4');" src = "images/sm4.png" width ="200" height ="150" > </td>
+				</tr>
+				<tr>
+					<td> <img id = "s5" onclick = "greenHighlight('s5');" src = "images/sm5.png" width ="200" height ="150" > </td>
+					<td> <img id = "s6" onclick = "greenHighlight('s6');" src = "images/sm6.png" width ="200" height ="150" > </td>
+					<td> <img id = "s7" onclick = "greenHighlight('s7');" src = "images/sm7.png" width ="200" height ="150" > </td>
+					<td> <img id = "s8" onclick = "greenHighlight('s8');" src = "images/sm8.png" width ="200" height ="150" > </td>
+				</tr>
+				<tr>
+					<td> <img id = "s9" onclick = "greenHighlight('s9');" src = "images/sm9.png" width ="200" height ="150" > </td>
+					<td> <img id = "s10" onclick = "greenHighlight('s10');" src = "images/sm10.png" width ="200" height ="150" > </td>
+					<td> <img id = "s11" onclick = "greenHighlight('s11');" src = "images/sm11.png" width ="200" height ="150" > </td>
+					<td> <img id = "s12" onclick = "greenHighlight('s12');" src = "images/sm12.png" width ="200" height ="150" > </td>
+				</tr>
+				<tr>
+					<td> <img id = "s13" onclick = "greenHighlight('s13');" src = "images/sm13.png" width ="200" height ="150" > </td>
+					<td> <img id = "s14" onclick = "greenHighlight('s14');" src = "images/sm14.png" width ="200" height ="150" > </td>
+					<td> <img id = "s15" onclick = "greenHighlight('s15');" src = "images/sm15.png" width ="200" height ="150" > </td>
+					<td> <img id = "s16" onclick = "greenHighlight('s16');" src = "images/sm16.png" width ="200" height ="150" > </td>
+				</tr>
+				
+			</table>
+		<div id = "shuffleButton">
+			<button onclick = "displayShuffle();"> Shuffle </button>
+		</div> 
+		
+	</body>
+	
+</html>

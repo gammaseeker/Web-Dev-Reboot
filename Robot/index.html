@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Robot Project</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/robot.css" />
+		<style> 
+		</style>
+		<script src = "js/robot.js">  
+			
+		</script>
+	</head>
+	<body onload = "initialize();">
+		
+		<div id="title"> The Arkship of Adun 
+		<img id = "bigImage" src = "images/SpearOfAdun_LotV_Art1.jpg" width= "300" height= "300" align= "center"/>
+		</div>
+		<hr />
+		
+		<div id = "speed">
+			 Speed 0
+		</div> 
+		<p> 
+			 <button onClick = "modifySpeed(1); limit(); display(); "> Speed up 1 </button> 
+			 <button onClick = "modifySpeed(-1); limit(); display(); "> Slow down 1 </button> 
+			 <button onClick = "modifySpeed(5); limit(); display(); "> Speed up 5 </button> 
+			 <button onClick = "modifySpeed(-5); limit(); display(); "> Slow down 5 </button> 
+			 
+		</p>
+		
+		<hr />
+		
+		<div id = "shield">
+			Shield 0
+		</div>
+		<p> 
+			 <button onClick = "modifyShield(1); limit(); display();"> Shield up 1 </button> 
+			 <button onClick = "modifyShield(-1); limit(); display(); "> Shield down 1 </button> 
+			 <button onClick = "modifyShield(5); limit(); display(); "> Shield up 5 </button> 
+			 <button onClick = "modifyShield(-5); limit(); display(); "> Shield down 5 </button> 
+		</p>
+		
+		<hr />
+		
+		<div id = "attackDamage">
+			 Attack Damage 0	
+		</div>
+		<p>
+			<button onClick = "modifyAttackDamage(1); limit(); display(); "> Attack Damage up 1 </button> 
+			<button onClick = "modifyAttackDamage(-1); limit(); display(); "> Attack Damage down 1 </button> 
+			<button onClick = "modifyAttackDamage(5); limit(); display();"> Attack Damage up 5 </button> 
+			<button onClick = "modifyAttackDamage(-5); limit(); display();"> Attack Damage down 5 </button> 
+		
+		</p>
+		
+		<hr />
+		
+		<div> 
+			<button onClick = "togglePurify();"> Purify Mode </button>
+				<span id= "purify">
+					Off
+				</span>
+		
+			<button onClick = "toggleSiege();"> Siege Mode </button>
+				<span id = "siege">
+					Off
+				</span>
+		</div>
+		
+		<hr />
+		
+		<div id = "engine">
+			Engine Type:
+		</div>
+			<p>
+				<button onClick = "hyperDriveString();"> Hyperdrive </button>
+				<button onClick = "cloakerString();"> Cloakerdrive  </button>
+				<button onClick = "dimenstionString();"> Dimensiondrive </button>
+			</p>
+		<div>
+			<span>
+				
+				<button type = "submit" onClick = "arkship();"> <img src="images/SpearOfAdun_LotV_Art1.jpg" width="200px" height="200px"/>
+			
+			</span>
+			<span id = "image2">
+				<button type = "submit" onClick = "carrier();"> <img src="images/Carrier_SC2_Cncpt1.jpg" width="200px" height="200px"/>
+			</span>
+			<span id= "image3">
+				<button type = "submit" onClick = "motherShip();"> <img src="images/Mothership_SC2_Art1.jpg" width="200px" height="200px"/>
+			</span>
+		</div>
+		
+	</body>
+	
+</html>

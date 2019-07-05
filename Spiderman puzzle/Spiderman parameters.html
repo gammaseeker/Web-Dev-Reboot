@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style>
+			#shuffleButton
+			{
+				text-align: center;
+			}
+		</style>
+		<script> 
+			function initialize()
+			{
+				src1 = "sm1.png";
+				src2 = "sm2.png";
+				src3 = "sm3.png";
+				src4 = "sm4.png";
+				src5 = "sm5.png";
+				src6 = "sm6.png";
+				src7 = "sm7.png";
+				src8 = "sm8.png";
+				src9 = "sm9.png";
+				src10 = "sm10.png";
+				src11 = "sm11.png";
+				src12 = "sm12.png";
+				src13 = "sm13.png";
+				src14 = "sm14.png";
+				src15 = "sm15.png";
+				src16 = "sm16.png";
+			}
+			function idParamter(sp)
+			{
+				spElement = document.getElementById(sp);
+			}
+			function shuffle()
+			{
+				rndNum = parseInt(Math.random() * 16) + 1;
+				if(rndNum == 1)
+				{
+					newSource = src1;
+				}
+				else
+				{
+					if (rndNum == 2)
+					{
+						newSource = src2;
+					}
+					else
+					{
+						if (rndNum == 3)
+						{
+							newSource = src3;
+						}
+						else
+						{
+							if(rndNum == 4)
+							{
+								newSource = src4;
+							}
+							else
+							{
+								if(rndNum == 5)
+								{
+									newSource = src5;
+								}
+								else
+								{
+									if(rndNum == 6)
+									{
+										newSource = src6;
+									}
+									else
+									{
+										if(rndNum == 7)
+										{
+											newSource = src7;
+										}
+										else
+										{
+											if(rndNum == 8)
+											{
+												newSource = src8;
+											}
+											else
+											{
+												if(rndNum == 9)
+												{
+													newSource = src9;
+												}
+												else
+												{
+													if(rndNum == 10)
+													{
+														newSource = src10;
+													}
+													else
+													{
+														if(rndNum == 11)
+														{
+															newSource = src11;
+														}
+														else
+														{
+															if(rndNum == 12)
+															{
+																newSource = src12;
+															}
+															else
+															{
+																if(rndNum == 13)
+																{
+																	newSource = src13;
+																}
+																else
+																{
+																	if(rndNum == 14)
+																	{
+																		newSource = src14;
+																	}
+																	else
+																	{
+																		if(rndNum == 15)
+																		{
+																			newSource = src15;
+																		}
+																		else
+																		{
+																			if(rndNum == 16)
+																			{
+																				newSource = src16;
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				display();
+			}
+			function display()
+			{
+				spElement.src = newSource;
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<div>
+			<img id = "s1" src = "sm1.png" width ="200" height ="150" onload = "idParamter('s1');">
+			<img id = "s2" src = "sm2.png" width ="200" height ="150" onload = "idParamter('s2');">
+			<img id = "s3" src = "sm3.png" width ="200" height ="150" onload = "idParamter('s3');">
+			<img id = "s4" src = "sm4.png" width ="200" height ="150" onload = "idParamter('s4');">
+		</div>
+		<div>
+			<img id = "s5" src = "sm5.png" width ="200" height ="150" onload = "idParamter('s5');">
+			<img id = "s6" src = "sm6.png" width ="200" height ="150" onload = "idParamter('s6');">
+			<img id = "s7" src = "sm7.png" width ="200" height ="150" onload = "idParamter('s7');">
+			<img id = "s8" src = "sm8.png" width ="200" height ="150" onload = "idParamter('s8');">
+		</div>
+		<div>
+			<img id = "s9" src = "sm9.png" width ="200" height ="150" onload = "idParamter('s9');">
+			<img id = "s10" src = "sm10.png" width ="200" height ="150" onload = "idParamter('s10');">
+			<img id = "s11" src = "sm11.png" width ="200" height ="150" onload = "idParamter('s11');">
+			<img id = "s12" src = "sm12.png" width ="200" height ="150" onload = "idParamter('s12');">
+		</div>
+		<div>
+			<img id = "s13" src = "sm13.png" width ="200" height ="150" onload = "idParamter('s13');">
+			<img id = "s14" src = "sm14.png" width ="200" height ="150" onload = "idParamter('s14');">
+			<img id = "s15" src = "sm15.png" width ="200" height ="150" onload = "idParamter('s15');">
+			<img id = "s16" src = "sm16.png" width ="200" height ="150" onload = "idParamter('s16');">
+		</div>
+		<div id = "shuffleButton">
+			<button onclick = "shuffle();"> Shuffle </button>
+		</div>
+	</body>
+	
+</html>

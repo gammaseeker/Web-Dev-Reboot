@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style> 
+			h1
+			{
+				border-style:outset;
+				border-width:12px;
+				border-color:black;
+				text-align: center;
+				height: 300px;
+				
+			}
+			.btnContainer, div
+			{
+				text-align:center;
+			}
+			button,div
+			{
+				font-size: 20pt;
+			}		
+		</style>
+		<script>
+						function initialize()
+			{
+				RED = 1, BLUE = 2, GREEN = 3, YELLOW = 4, WHITE = 5;
+				LOWER = 1, UPPER = 4;
+				patternArray = [];
+				userArray = [];
+				simon = document.getElementById("says");
+				round = 1;
+			}
+			function generatePattern()
+			{
+				if(round%2 == 1)
+				{
+					num = round + 1;
+				}
+				else
+				{
+					num = round;
+				}
+				for(var i = 1; i < num; i++)
+				{
+					clr = getRandomInteger(LOWER,UPPER);
+					patternArray.push(clr);
+					patternArray.push(WHITE);
+					(function(i)
+					{
+						window.setTimeout(function()
+						{
+							(changeBackground(patternArray[i]), 1000);
+						}, i * 2000);
+					} (i)
+					);
+				}
+				alert(patternArray);
+				displayPattern();
+			}
+			function selection(color)
+			{
+				userArray.push(color);
+			}
+			function check()
+			{
+				for(var i = 0; i < patternArray.length; i++)
+				{
+					if(patternArray[i] != userArray[i])
+					{
+						lose();
+						return;
+					}
+				}
+				win();
+			}
+			function win()
+			{
+				round++;
+				generatePattern();
+			}
+			function lose()
+			{
+			
+			}
+			function changeBackground(Bcolor)
+			{
+				if(Bcolor == RED)
+				{
+					simon.style.backgroundColor = "red";
+				}	
+				if(Bcolor == BLUE)
+				{
+					simon.style.backgroundColor = "blue";
+				}
+				if(Bcolor == GREEN)
+				{
+					simon.style.backgroundColor = "green";
+				}
+				if(Bcolor == YELLOW)
+				{
+					simon.style.backgroundColor = "yellow";
+				}
+				if(Bcolor == WHITE)
+				{
+					simon.style.backgroundColor = "white";
+				}
+				
+				//clearInterval(backgroundInterval);
+			}
+			function displayPattern()
+			{
+				for(var i = 0; i < patternArray.length; i++)
+				{
+					
+				/*	if(patternArray[i] == RED)
+					{
+						backgroundInterval = setTimeout(changeBackground("red"),1000);
+						
+					}
+					if(patternArray[i] == BLUE)
+					{
+						backgroundInterval = setTimeout(changeBackground("blue"),1000);
+						
+					}
+					if(patternArray[i] == GREEN)
+					{
+						backgroundInterval = setTimeout(changeBackground("green"),1000);
+						
+					}
+					if(patternArray[i] == YELLOW)
+					{
+						backgroundInterval = setTimeout(changeBackground("yellow"),1000);
+				
+					}*/
+				}
+				//backgroundInterval = setTimeout(changeBackground("white"),1000);
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<h1 id = "says"> REMEMBER THE PATTERN</h1>
+		<div class = "btnContainer">
+			<button onclick = "generatePattern();"> Start</button> </br>
+			<button onclick = "selection('red')"> Red</button>
+			<button onclick = "selection('blue')"> Blue</button>
+			<button onclick = "selection('green')"> Green</button>
+			<button onclick = "selection('yellow')"> Yellow</button>
+		</div>
+		<div> Round: <span>1</span></div>
+	</body>
+	
+</html>

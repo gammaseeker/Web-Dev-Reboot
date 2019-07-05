@@ -1,0 +1,17 @@
+h1
+{
+	border-style:outset;
+	border-width:12px;
+	border-color:black;
+	text-align: center;
+	height: 300px;
+	
+}
+.btnContainer, div
+{
+	text-align:center;
+}
+button,div
+{
+	font-size: 20pt;
+}

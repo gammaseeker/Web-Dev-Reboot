@@ -1,0 +1,182 @@
+ <!DOCTYPE HTML>
+ <!-- Vicki Lau -->
+ <html>
+	<head>
+		<title></title>
+		<style>
+			div {
+				margin:10px;
+			}
+			h1 {
+				text-align:center;
+			}
+			#out {
+				text-align:center;
+				font:72px black helvetica;
+			}
+			#r {
+				width:100px;
+				height:100px;
+				background-color:red;
+				display:inline-block;
+				border:3px solid transparent;
+			}
+			#b {
+				width:100px;
+				height:100px;
+				background-color:blue;
+				display:inline-block;
+				border:3px solid transparent;
+			}
+			#g {
+				width:100px;
+				height:100px;
+				background-color:green;
+				display:inline-block;
+				border:3px solid transparent;
+			}
+			#y {
+				width:100px;
+				height:100px;
+				background-color:yellow;
+				display:inline-block;
+				border:3px solid transparent;
+			}
+		</style>
+		<script>
+			function initialize() {
+				redButton = document.getElementById("red");
+				blueButton = document.getElementById("blue");
+				greenButton = document.getElementById("green");
+				yellowButton = document.getElementById("yellow");
+				
+				redBox = document.getElementById("r");
+				blueBox = document.getElementById("b");
+				greenBox = document.getElementById("g");
+				yellowBox = document.getElementById("y");
+				
+				output = document.getElementById("out");
+				other = document.getElementById("o");
+				
+				redButton.disabled = true;
+				blueButton.disabled = true;
+				greenButton.disabled = true;
+				yellowButton.disabled = true;
+				
+				pattern = [];
+				tempArray = [];
+				playerPattern = [];
+				level = 0;
+				
+				createSequence(generateColors());
+			}
+			function generateColors() {
+				num = getRandomInteger(0,3);
+				var color = "";
+				if (num == 0) {
+					return "red";
+				}
+				if (num == 1) {
+					return "blue";
+				}
+				if (num == 2) {
+					return "green";
+				}
+				if (num == 3) {
+					return "yellow";
+				}
+			}
+			function createSequence(c) {
+				pattern.push(c);
+				tempArray.push(c);
+				
+				setTimeout(display, 2000);
+			}
+			function playerTurn() {
+				redBox.style.border = "3px solid transparent";
+				blueBox.style.border = "3px solid transparent";
+				greenBox.style.border = "3px solid transparent";
+				yellowBox.style.border = "3px solid transparent";
+				
+				redButton.disabled = false;
+				blueButton.disabled = false;
+				greenButton.disabled = false;
+				yellowButton.disabled = false;
+			}
+			function clear() {
+				redButton.disabled = true;
+				blueButton.disabled = true;
+				greenButton.disabled = true;
+				yellowButton.disabled = true;
+			}
+			function addColor(c) 
+			{
+				playerPattern.push(c);
+				var checked = [];
+				
+				for (var i = 0; i < playerPattern.length; i++) {
+					if (playerPattern[i] == pattern[i]) {
+						checked.push("true");
+					}
+					else {
+						redBox.style.display = "none";
+						blueBox.style.display = "none";
+						greenBox.style.display = "none";
+						yellowBox.style.display = "none";
+						
+						redButton.style.display = "none";
+						blueButton.style.display = "none";
+						greenButton.style.display = "none";
+						yellowButton.style.display = "none";
+						
+						output.innerHTML = "You lost. You got up to level " + level;
+					}
+					if (checked.length == pattern.length) {
+						level++;
+						output.innerHTML = level;
+						clear();
+						createSequence(generateColors());
+						setTimeout(display, 2000);
+					}
+				}
+			}
+			function display() 
+			{
+				while (tempArray.length > 0) 
+				{
+					var color = tempArray.shift();
+					if (color == "red") {
+						redBox.style.border = "3px solid black";
+					}
+					if (color == "blue") {
+						blueBox.style.border = "3px solid black";
+					}
+					if (color == "green") {
+						greenBox.style.border = "3px solid black";
+					}
+					if (color == "yellow") {
+						yellowBox.style.border = "3px solid black";
+					}
+				}
+				setTimeout(playerTurn, 2000);
+			}
+		</script>
+		<script src="utilities1.js"></script>
+	</head>
+	
+	<body onload = "initialize();">
+		<h1>
+			<div id = "r"></div>
+			<div id = "b"></div>
+			<div id = "g"></div>
+			<div id = "y"></div>
+		</h1>
+		<h1>
+			<button id = "red" onclick = "addColor('red');">red</button>
+			<button id = "blue" onclick = "addColor('blue');">blue</button>
+			<button id = "green" onclick = "addColor('green');">green</button>
+			<button id = "yellow" onclick = "addColor('yellow');">yellow</button>
+		</h1>
+		<div id = "out"></div>
+	</body>
+ </html>

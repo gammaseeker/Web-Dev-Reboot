@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> Simon Says</title>
+		<link type = "text/css" rel = "stylesheet" href = "css/simon.css" />
+		<style>
+			
+		</style>
+		<script src = "js/utilities1.js"></script>
+		<script src = "js/simon.js">
+		
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<h1 id = "says"> REMEMBER THE PATTERN</h1>
+		<div class = "btnContainer">
+			<button id = "startGame" onclick = "start();"> Start</button> </br>
+			<button onclick = "selection('red')"> Red</button>
+			<button onclick = "selection('blue')"> Blue</button>
+			<button onclick = "selection('green')"> Green</button>
+			<button onclick = "selection('yellow')"> Yellow</button>
+		</div>
+		<div> Round: <span id = "rndCtr">1</span></div>
+	</body>
+	
+</html>

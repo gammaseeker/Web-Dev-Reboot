@@ -1,0 +1,35 @@
+body
+{
+	background-color: rgb(51, 102, 204);
+}
+#shuffleButton
+{
+	text-align: center;
+	position: static;
+}
+#victory
+{
+	text-align: center;
+	text-weight: bold;
+	font-family: Berlin Sans FB;
+	font-size: 48pt;
+	color: #ff4d4d;
+}
+#gameTable
+{
+	margin-left:auto; 
+	margin-right:auto;
+	
+}
+button
+{
+	font-size: 48pt;
+}
+#winImg
+{
+	margin-left:auto; 
+	margin-right:auto;
+	position:absolute;
+	left: 540px;
+	display: none;
+}

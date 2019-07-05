@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--Ray-->
+<html> 
+	<head> 
+		<title>Simon says to click colors</title>
+		<style>
+			*
+			{
+				font-family: eras itc;
+				font-size: 20pt;
+			}
+			#brian
+			{
+				z-index: -999;
+				position: fixed;
+			}
+			#redbut
+			{
+				background-color: red;
+				color: limegreen;
+			}
+			#greenbut
+			{
+				background-color: green;
+				color: red;
+			}
+			#bluebut
+			{
+				background-color: blue;
+				color: orange;
+			}
+			#yellowbut
+			{
+				background-color: yellow;
+				color: purple;
+			}
+		</style> 
+		<script>
+			function startup()
+			{
+				colorOrder = [];
+				actionArray = [];
+				colorsArray = ["red","green","blue","yellow"];
+				roundNum = 1;
+				buttonArray = document.getElementsByTagName("button");
+			}
+			//checks if two arrays are the same
+			function equalArrays(arrayOne,arrayTwo)
+			{
+				if(arrayOne.length === arrayTwo.length)
+				{
+					for(var i = 0; i<arrayOne.length; i++)
+					{
+						if(arrayOne[i] != arrayTwo[i])
+						return false;
+					}
+					return true;
+				}
+				return false;
+			}
+			//used to disable buttons during the flashes
+			function toggleButtons(bool)
+			{
+				for(var i = 1; i<buttonArray.length; i++)
+				{
+					buttonArray[i].disabled = bool;
+				}
+			}
+			//disables buttons, flashes colors, then reenables buttons 
+			function showColors()
+			{	
+				toggleButtons(true);
+				current = 0;
+				interval = setInterval(function(){
+				document.body.style.backgroundColor = colorOrder[current];
+				if(current < colorOrder.length)
+				{
+					current++;
+					setTimeout(function(){document.body.style.backgroundColor = "transparent";}, 500);
+				}
+				else
+				{
+					clearInterval(interval);
+					toggleButtons(false);
+					return;
+				}}, 600);
+			}
+			//adds the player's clicked color to the actionArray then starts the next round if the player's array is the same
+			function playerAction(color)
+			{
+				actionArray.push(color);
+				if(equalArrays(actionArray,colorOrder))
+				{
+					roundNum ++;
+					startRound();
+					display();
+				}
+			}
+			//runs the game
+			function startRound()
+			{
+				display();
+				colorOrder.push(colorsArray[parseInt(Math.random()*4)]);
+				showColors();
+				tryAgain();
+			}
+			//enables the player to reset his/her order of buttons pressed to essentially "try again" or just used to clear the actionArray
+			function tryAgain()
+			{
+				actionArray = [];
+			}
+			//displays the round number
+			function display()
+			{
+				buttonArray[0].innerHTML = "Round " + roundNum;
+			}
+		</script>
+	</head>
+	<body onload = "startup();">
+		<button onclick = 'startRound(); disabled = true;' >Start Game</button><button onclick = 'tryAgain();'>Try Again?</button>
+		<button id = 'redbut' onclick = 'playerAction("red");'>RED</button><button id = 'bluebut' onclick = 'playerAction("blue");'>BLUE</button><button id = 'greenbut' onclick = 'playerAction("green");'>GREEN</button><button id = 'yellowbut' onclick = 'playerAction("yellow");'>YELLOW</button>
+		<img id = "brian" src = "brianface.png" />
+	</body>
+</html>
