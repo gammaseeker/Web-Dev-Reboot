@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!-- Ivan Turner -->
+<html>
+	<head>
+		<title>2D Arrays and Properties</title>
+		<style>
+			button
+			{
+				font-size:24pt;
+			}
+		</style>
+		<script>
+			function initialize()
+			{
+				//Put all of the buttons into an array.
+				btnList = document.getElementsByTagName("button");
+				
+				/*
+					Create a counter property for each of the existing buttons on the page.  This can be done dynamically by simply declaring the variable as a property of the object and initializing it with a value.
+					
+					Use the dot (.) operator to associate with the object and give it a value using the assignment operator.
+					
+					These counters (ctr) are initialized to 0.
+				*/
+				for (var i = 0; i < btnList.length; i++)
+					btnList[i].ctr = 0;
+			}
+			
+			function countMe(btn)
+			{
+				/*
+					The button object (btn) is sent in by the function.  It should correspond to one of the buttons on the page.  Using the button object, the counter property (ctr) is incremented and displayed on the button itself.
+				*/
+				btn.ctr++;
+				btn.innerHTML = btn.ctr;
+			}
+		</script>
+	</head>
+		
+	<body onload = "initialize();">
+		<button onclick = "countMe(this);">0</button>
+		<button onclick = "countMe(this);">0</button>
+		<button onclick = "countMe(this);">0</button>
+		<button onclick = "countMe(this);">0</button>
+	</body>
+</html>

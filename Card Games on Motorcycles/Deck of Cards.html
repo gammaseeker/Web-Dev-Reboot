@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!-- Joey Jiemjitpolchai -->
+<html> 
+	<head> 
+		<title> </title>
+		<style> </style>
+		<script>
+			function initialize()
+			{
+				cardDiv = document.getElementById("showCard");
+				deck = [];
+				CONSTANTARRAYRANK = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+				CONSTANTARRAYSUIT
+			}
+			function makeDeck()
+			{
+				for(var r = 1; r < 14; r++)
+				{
+					for(var s = 0; s <4; s++)
+					{
+
+						var card = [CONSTANTARRAY[r-1], s];
+						deck.push(card);
+						alert (deck);
+					}
+				}
+				
+			}
+			function displayDeck()
+			{
+				
+			}
+		</script>
+	</head>
+	<body onload = "initialize();"> 
+		<button onclick = "makeDeck();"> Make Deck</button>
+		<div id = "showCard"> </div>
+	</body>
+	
+</html>

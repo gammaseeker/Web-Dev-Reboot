@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<!--Hans Montero-->
+<html>
+	<head>
+		<title> </title>
+		<style> </style>
+		<script> 
+			function initialize()
+			{
+				buttonArr = document.getElementsByTagName("button");
+				for(b=0;b<buttonArr.length;b++)
+				{
+					buttonArr[b].counter = 0;
+				}
+			}
+			
+			function countMe(buttonOb)
+			{
+				//alert(buttonOb.counter);
+				buttonOb.counter ++;
+				buttonOb.innerHTML = buttonOb.counter;
+			}
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<button onclick = "countMe(this);">0</button>
+		<button onclick = "countMe(this);">0</button>
+		<button onclick = "countMe(this);">0</button>
+		<button onclick = "countMe(this);">0</button>
+		
+	</body>
+</html>
